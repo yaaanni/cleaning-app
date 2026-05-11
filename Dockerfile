@@ -17,4 +17,4 @@ COPY . /app/
 
 EXPOSE 10000
 
-CMD python manage.py migrate && gunicorn CleaningApp.wsgi:application --bind 0.0.0.0:10000
+CMD python manage.py collectstatic --noinput && python manage.py migrate && gunicorn CleaningApp.wsgi:application --bind 0.0.0.0:10000
