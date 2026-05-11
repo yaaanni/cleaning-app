@@ -17,4 +17,7 @@ COPY . /app/
 
 EXPOSE 10000
 
-CMD python manage.py collectstatic --noinput && python manage.py migrate && gunicorn CleaningApp.wsgi:application --bind 0.0.0.0:10000
+CMD python manage.py collectstatic --noinput && \
+    python manage.py migrate && \
+    python manage.py shell -c "from django.contrib.auth import get_user_model; U=get_user_model(); U.objects.filter(username='yana').exists() or U.objects.create_superuser('yana', 'admin@example.com', 'helloworld123')" && \
+    gunicorn CleaningApp.wsgi:application --bind 0.0.0.0:10000
