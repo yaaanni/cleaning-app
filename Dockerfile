@@ -17,4 +17,4 @@ COPY . /app/
 
 EXPOSE 10000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:10000", "CleaningApp.wsgi:application"]
+CMD python manage.py migrate && gunicorn CleaningApp.wsgi:application --bind 0.0.0.0:10000
