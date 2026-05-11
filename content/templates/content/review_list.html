@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Reviews - Cleaning Company</title>
+    <style>
+        :root { --primary: #4361ee; --bg-color: #f8fafc; --text-main: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+
+        nav {
+            background-color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
+
+        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 30px; }
+
+        .review-card { background: var(--card-bg); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .client-name { font-weight: bold; font-size: 1.1em; color: var(--primary); }
+        .review-date { color: #888; font-size: 0.85em; }
+        .rating-stars { color: #f59e0b; font-size: 1.2em; }
+        .review-text { line-height: 1.5; color: #475569; }
+
+        .form-section { background: #eff6ff; padding: 30px; border-radius: 12px; border: 2px solid var(--primary); margin-bottom: 40px; }
+        .form-section h2 { margin-top: 0; color: var(--primary); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #475569; }
+        .form-control { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-family: inherit;}
+
+        .btn-submit { background: var(--primary); color: white; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1em; transition: background 0.3s;}
+        .btn-submit:hover { background: #3a56d4; }
+
+        /* Кнопка "Добавить отзыв" (центрированная) */
+        .btn-add-review { display: inline-block; background: var(--primary); color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1em; transition: background 0.3s; cursor: pointer; border: none; }
+        .btn-add-review:hover { background: #3a56d4; }
+        .action-container { text-align: center; margin-bottom: 40px; }
+
+        footer { background: white; text-align: center; padding: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Customer Reviews</h1>
+
+    {% if is_client %}
+        {% if request.GET.add or form.errors %}
+            <div class="form-section">
+                <h2>Leave a Review</h2>
+                <form method="post" action="{% url 'content:review_list' %}">
+                    {% csrf_token %}
+
+                    {% if form.non_field_errors %}
+                        <div style="color: #ef4444; margin-bottom: 15px; font-weight: bold;">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <div class="form-group">
+                        <label>Rating:</label>
+                        {{ form.rating }}
+                    </div>
+                    <div class="form-group">
+                        <label>Your Feedback:</label>
+                        {{ form.text }}
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Review</button>
+                </form>
+            </div>
+        {% else %}
+            <div class="action-container">
+                <a href="?add=1" class="btn-add-review">Add Review</a>
+            </div>
+        {% endif %}
+
+    {% elif not user.is_authenticated %}
+        <div class="action-container">
+            <a href="{% url 'users:register' %}" class="btn-add-review">Add Review</a>
+        </div>
+
+    {% endif %}
+
+    <div class="reviews-list">
+        {% for review in reviews %}
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="client-name">{{ review.client }}</span>
+                    <span class="review-date">{{ review.date|date:"d M Y" }}</span>
+                </div>
+                <div class="rating-stars">
+                    {% for i in "12345" %}
+                        {% if forloop.counter <= review.rating %}★{% else %}☆{% endif %}
+                    {% endfor %}
+                    <span style="color: #64748b; font-size: 0.8em; margin-left: 5px;">({{ review.rating }}/5)</span>
+                </div>
+                <p class="review-text">{{ review.text|linebreaksbr }}</p>
+            </div>
+        {% empty %}
+            <p style="text-align: center; color: #94a3b8; padding: 30px; background: white; border-radius: 8px; border: 1px dashed var(--border-color);">
+                No reviews yet. Be the first to leave one!
+            </p>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+    <p>
+        <a href="{% url 'content:privacy_policy' %}">Privacy Policy</a> |
+        <a href="{% url 'content:vacancy_list' %}">Careers</a>
+    </p>
+</footer>
+
+</body>
+</html>

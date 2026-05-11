@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary & FAQ - Cleaning Company</title>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --bg-color: #f8fafc;
+            --text-main: #333;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 30px;}
+
+        .faq-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            position: relative;
+        }
+
+        .faq-question {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-right: 100px; /* Чтобы текст не наезжал на дату */
+        }
+
+        .faq-answer {
+            color: #475569;
+            margin-bottom: 0;
+        }
+
+        .faq-date {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 0.85em;
+            color: #94a3b8;
+            background: #f1f5f9;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .empty-msg {
+            text-align: center;
+            color: #64748b;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Terminology & Frequently Asked Questions</h1>
+
+    <div class="faq-list">
+        {% for faq in faqs %}
+        <div class="faq-card">
+            <div class="faq-date">Added: {{ faq.date_added|date:"d M Y" }}</div>
+
+            <h2 class="faq-question">Q: {{ faq.question }}</h2>
+            <p class="faq-answer"><strong>A:</strong> {{ faq.answer|linebreaksbr }}</p>
+        </div>
+        {% empty %}
+        <div class="empty-msg">
+            No FAQs available at the moment. Please check back later!
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

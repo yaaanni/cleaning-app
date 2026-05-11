@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Django
+db.sqlite3
+media/
+static_root/
+.env
+local_settings.py
+
+# Тесты и покрытие (Coverage)
+.coverage
+htmlcov/
+.pytest_cache/
+.cov
+coverage.xml
+nosetests.xml
+
+# IDE (PyCharm и VS Code)
+.idea/
+.vscode/
+*.swp
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db

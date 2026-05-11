@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cleaning Company</title>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --bg-color: #f8fafc;
+            --text-main: #333;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        nav {
+            background-color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .company-logo {
+            max-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .requisites {
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        th { background-color: #f8fafc; color: #64748b; }
+        .year-col { font-weight: bold; color: var(--primary); width: 100px; }
+
+        .btn-video {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ef4444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-video:hover { background-color: #dc2626; }
+
+        .cta-block {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid #cbd5e1;
+        }
+        .btn-primary {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover { background-color: #3a56d4; }
+
+        footer {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #666;
+        }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+
+    {% if company %}
+    <div class="card">
+        <div class="company-header">
+            {% if company.logo %}
+            <img src="{{ company.logo.url }}" alt="Company Logo" class="company-logo">
+            {% endif %}
+            <h1>{{ company.name }}</h1>
+        </div>
+
+        <p>{{ company.description|linebreaks }}</p>
+
+        {% if company.video_url %}
+        <a href="{{ company.video_url }}" target="_blank" class="btn-video">▶ Watch our video</a>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h2>Our Details</h2>
+        <div class="requisites">{{ company.requisites }}</div>
+    </div>
+    {% else %}
+    <p>Company information will be available soon!</p>
+    {% endif %}
+
+    <div class="card">
+        <h2>Company History by Year</h2>
+        {% if history %}
+        <table>
+            <thead>
+            <tr>
+                <th>Year</th>
+                <th>Event</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in history %}
+            <tr>
+                <td class="year-col">{{ item.year }}</td>
+                <td>{{ item.description }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>History is still being written...</p>
+        {% endif %}
+    </div>
+
+    <div class="cta-block">
+        <h2>Want to become part of our story?</h2>
+        <p style="color: #475569;">We are always looking for dedicated professionals to join our growing team.</p>
+        <a href="{% url 'content:vacancy_list' %}" class="btn-primary">View Open Vacancies</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+    <p>
+        <a href="{% url 'content:privacy_policy' %}">Privacy Policy</a>
+    </p>
+</footer>
+
+</body>
+</html>

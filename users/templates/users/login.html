@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Cleaning Company</title>
+    <style>
+        :root { --primary: #4361ee; --bg-color: #f8fafc; --text-main: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        nav { background-color: white; padding: 15px 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        nav a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; flex-grow: 1; width: 100%; display: flex; align-items: center; justify-content: center; }
+
+        .login-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            width: 100%;
+        }
+
+        .login-card h1 {
+            color: var(--primary);
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #475569; }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15); }
+
+        .error-msg { background: #fee2e2; color: #ef4444; padding: 10px; border-radius: 6px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 1.1em;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .btn-submit:hover { background: #3a56d4; }
+
+        .register-link { text-align: center; margin-top: 25px; color: #64748b; }
+        .register-link a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        .register-link a:hover { text-decoration: underline; }
+
+        footer { background: white; text-align: center; padding: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; margin-top: auto; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/about/">About Us</a>
+    <a href="/news/">News</a>
+    <a href="/faq/">FAQ</a>
+    <a href="{% url 'users:contacts' %}">Contacts</a>
+</nav>
+
+<div class="container">
+    <div class="login-card">
+        <h1>Welcome Back</h1>
+
+        {% if form.errors %}
+        <div class="error-msg">
+            Invalid username or password. Please try again.
+        </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" class="form-control" required id="id_username">
+            </div>
+
+            <div class="form-group">
+                <label for="id_password">Password:</label>
+                <input type="password" name="password" class="form-control" required id="id_password">
+            </div>
+
+            <button type="submit" class="btn-submit">Log In</button>
+        </form>
+
+        <div class="register-link">
+            Don't have an account? <a href="{% url 'users:register' %}">Register here</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

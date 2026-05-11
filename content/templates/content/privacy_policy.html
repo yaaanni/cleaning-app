@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Cleaning Company</title>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --bg-color: #f8fafc;
+            --text-main: #333;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            /* Исправление: магия Flexbox для футера */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 30px;}
+
+        .empty-content {
+            background: var(--card-bg);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 60px 20px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.1em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        footer {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #666;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+
+    <div class="empty-content">
+        <p>This page is currently empty.</p>
+        <p>The detailed Privacy Policy terms will be published here soon.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+    <p><a href="{% url 'content:privacy_policy' %}">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Catalog - Cleaning Company</title>
+    <style>
+        :root { --primary: #4361ee; --bg-color: #f8fafc; --text-main: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; }
+
+        nav { background-color: white; padding: 15px 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
+        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 30px; }
+
+        .dashboard-panel { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid var(--border-color); margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-start; }
+
+        .filter-form { display: flex; gap: 10px; align-items: flex-end; }
+        .filter-form input { padding: 8px; border: 1px solid #cbd5e1; border-radius: 5px; width: 100px; }
+        .btn-filter { background: var(--primary); color: white; border: none; padding: 9px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+        .popular-badge { background: linear-gradient(135deg, #f59e0b, #fbbf24); color: white; padding: 15px 20px; border-radius: 8px; font-weight: bold; text-align: center; flex-grow: 1; max-width: 300px; }
+        .popular-badge span { display: block; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; opacity: 0.9; }
+
+        .chart-container { width: 100%; max-width: 500px; margin: 0 auto 40px auto; background: white; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+        .category-section { margin-bottom: 40px; }
+        .category-title { color: #475569; border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; }
+
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { background: var(--card-bg); border-radius: 8px; padding: 20px; border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column;}
+        .service-name { font-size: 1.2em; font-weight: bold; color: var(--primary); margin-top: 0; }
+        .service-price { font-size: 1.1em; color: #10b981; font-weight: bold; margin-bottom: 10px; }
+        .service-note { color: #64748b; font-size: 0.9em; flex-grow: 1; margin-bottom: 15px;}
+
+        .btn-add { background: var(--primary); color: white; border: none; padding: 10px; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer; transition: background 0.2s;}
+        .btn-add:hover { background: #3a56d4; }
+
+        .messages { padding: 0; list-style: none; margin-bottom: 20px; }
+        .messages li { padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        .messages .success { background-color: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+        .messages .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+
+        footer { background: white; text-align: center; padding: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Service Catalog</h1>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div class="dashboard-panel">
+        <div>
+            <h3 style="margin-top: 0; color: var(--text-main);">Filter by Price</h3>
+            <form method="GET" class="filter-form">
+                <div>
+                    <label style="display: block; font-size: 0.8em; color: #64748b;">Min (BYN)</label>
+                    <input type="number" name="min_price" value="{{ request.GET.min_price }}" min="0">
+                </div>
+                <div>
+                    <label style="display: block; font-size: 0.8em; color: #64748b;">Max (BYN)</label>
+                    <input type="number" name="max_price" value="{{ request.GET.max_price }}" min="0">
+                </div>
+                <button type="submit" class="btn-filter">Apply</button>
+                <a href="{% url 'content:catalog' %}" style="text-decoration: none; color: #64748b; margin-left: 10px; font-size: 0.9em;">Clear</a>
+            </form>
+        </div>
+
+        {% if popular_service %}
+        <div class="popular-badge">
+            <span>Bestseller</span>
+            {{ popular_service.name }}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="chart-container">
+        <h3 style="text-align: center; margin-top: 0;">Top 5 Selling Services</h3>
+        <canvas id="salesChart"></canvas>
+    </div>
+
+    {% for category in categories %}
+        {% if category.services.all %}
+            <div class="category-section">
+                <h2 class="category-title">{{ category.name }}</h2>
+                {% if category.description %}
+                    <p style="color: #64748b; margin-bottom: 15px;">{{ category.description }}</p>
+                {% endif %}
+
+                <div class="service-grid">
+                    {% for service in category.services.all %}
+                        <div class="service-card">
+                            <h3 class="service-name">{{ service.name }}</h3>
+                            <div class="service-price">{{ service.price }} BYN</div>
+                            <div class="service-note">{{ service.note }}</div>
+
+                            {% if is_client %}
+                                <form action="{% url 'content:add_to_cart' %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="service_id" value="{{ service.id }}">
+                                    <button type="submit" class="btn-add">Add to Cart 🛒</button>
+                                </form>
+                            {% elif not user.is_authenticated %}
+                                <div style="text-align: center; margin-top: 10px;">
+                                    <a href="{% url 'users:login' %}" style="color: var(--primary); text-decoration: none; font-size: 0.9em;">Login to order</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% empty %}
+        <p>No services match your criteria.</p>
+    {% endfor %}
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('salesChart');
+    const labels = {{ chart_labels|safe }};
+    const data = {{ chart_values|safe }};
+
+    if (labels.length > 0) {
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Total Units Sold',
+                    data: data,
+                    backgroundColor: '#4361ee',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 }
+                    }
+                }
+            }
+        });
+    } else {
+        ctx.style.display = 'none';
+        ctx.insertAdjacentHTML('afterend', '<p style="text-align: center; color: #94a3b8;">Not enough data for chart yet.</p>');
+    }
+</script>
+
+</body>
+</html>

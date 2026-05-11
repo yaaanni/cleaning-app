@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Codes - Cleaning Company</title>
+    <style>
+        :root { --primary: #4361ee; --bg-color: #f8fafc; --text-main: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; }
+
+        nav { background-color: white; padding: 15px 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
+        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 30px; }
+        h2 { color: #475569; margin-top: 40px; margin-bottom: 20px; }
+
+        .promo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+
+        .coupon {
+            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+            border: 2px dashed var(--primary);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .coupon:hover { transform: translateY(-5px); }
+
+        .discount { font-size: 2.5em; font-weight: bold; color: #10b981; margin-bottom: 5px; line-height: 1; }
+        .code-box {
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--primary);
+            font-family: monospace;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid #bfdbfe;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        .coupon.archived {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            box-shadow: none;
+            opacity: 0.7;
+        }
+        .coupon.archived:hover { transform: none; }
+        .coupon.archived .discount { color: #94a3b8; }
+        .coupon.archived .code-box { background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0; text-decoration: line-through; }
+
+        .empty-msg { text-align: center; color: #64748b; padding: 30px; background: white; border-radius: 8px; border: 1px dashed var(--border-color); grid-column: 1 / -1; }
+
+        footer { background: white; text-align: center; padding: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; margin-top: 40px; }
+        footer a { color: var(--primary); text-decoration: none; margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Special Offers & Promo Codes</h1>
+
+    <h2>Active Promotions</h2>
+    <div class="promo-grid">
+        {% for promo in active_promos %}
+            <div class="coupon">
+                <div class="discount">{{ promo.discount_percent }}% OFF</div>
+                <div style="color: #64748b; font-size: 0.9em;">Use this code at checkout</div>
+                <div class="code-box">{{ promo.code }}</div>
+            </div>
+        {% empty %}
+            <div class="empty-msg">No active promotions at the moment. Check back soon!</div>
+        {% endfor %}
+    </div>
+
+    <h2>Archived Promotions (Expired)</h2>
+    <div class="promo-grid">
+        {% for promo in archived_promos %}
+            <div class="coupon archived">
+                <div class="discount">{{ promo.discount_percent }}% OFF</div>
+                <div style="color: #94a3b8; font-size: 0.9em;">Expired</div>
+                <div class="code-box">{{ promo.code }}</div>
+            </div>
+        {% empty %}
+            <div class="empty-msg">No archived promotions.</div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+    <p>
+        <a href="{% url 'content:privacy_policy' %}">Privacy Policy</a> |
+        <a href="{% url 'content:vacancy_list' %}">Careers</a>
+    </p>
+</footer>
+
+</body>
+</html>

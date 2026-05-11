@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart - Cleaning Company</title>
+    <style>
+        :root { --primary: #4361ee; --bg-color: #f8fafc; --text-main: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; }
+
+        nav { background-color: white; padding: 15px 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
+        h1 { border-bottom: 3px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 30px; }
+
+        .cart-card { background: var(--card-bg); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border-color); margin-bottom: 30px; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background: #f1f5f9; color: #475569; }
+
+        .btn-remove { background: none; border: none; color: #ef4444; font-size: 1.2em; cursor: pointer; padding: 5px; transition: transform 0.2s; }
+        .btn-remove:hover { transform: scale(1.2); }
+
+        .total-row { font-size: 1.3em; font-weight: bold; color: var(--primary); text-align: right; margin-top: 20px; }
+
+        .checkout-form { background: #f8fafc; padding: 25px; border-radius: 8px; border: 1px solid #cbd5e1; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #475569; }
+        .form-control { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-family: inherit; }
+
+        .btn-submit { color: white; border: none; padding: 15px 30px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1em; width: 100%; transition: background 0.2s; }
+        .btn-order { background: #64748b; }
+        .btn-order:hover { background: #475569; }
+        .btn-pay { background: #10b981; }
+        .btn-pay:hover { background: #059669; }
+
+        .messages { padding: 0; list-style: none; margin-bottom: 20px; }
+        .messages li { padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        .messages .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+        .messages .success { background-color: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+
+        .status-badge { background-color: #fef3c7; color: #d97706; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.9em; }
+
+        footer { background: white; text-align: center; padding: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="/about/">About Us</a>
+        <a href="/news/">News</a>
+        <a href="/faq/">FAQ</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="{% url 'content:promo_list' %}">Promos</a>
+        <a href="{% url 'content:catalog' %}">Catalog</a>
+    </div>
+
+    <div class="nav-right">
+        {% if user.is_authenticated %}
+            {% if user.is_staff %}
+                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
+
+                {% if user.is_superuser %}
+                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
+                {% endif %}
+
+                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
+            {% else %}
+                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
+                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
+            {% endif %}
+
+            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
+                {% csrf_token %}
+                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
+                    Logout
+                </button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Your Shopping Cart</h1>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if cart_items %}
+        <div class="cart-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th style="text-align: center;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                        <tr>
+                            <td>{{ item.service.name }}</td>
+                            <td>{{ item.service.price }} BYN</td>
+                            <td>{{ item.quantity }}</td>
+                            <td style="font-weight: bold;">{{ item.cost }} BYN</td>
+                            <td style="text-align: center;">
+                                <form method="post" action="{% url 'content:remove_from_cart' %}" style="margin: 0;">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="service_id" value="{{ item.service.id }}">
+                                    <button type="submit" class="btn-remove" title="Remove Item">✖</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="total-row">
+                Estimated Total: {{ total_cost }} BYN
+            </div>
+        </div>
+
+        <div class="checkout-form">
+            <h2 style="margin-top: 0; color: var(--primary);">Checkout Details</h2>
+            <form method="post" action="{% url 'content:cart' %}">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="address">Cleaning Address:</label>
+                    <input type="text" id="address" name="address" class="form-control" required placeholder="City, Street, Apartment...">
+                </div>
+
+                <div class="form-group">
+                    <label for="date_execution">Desired Date and Time:</label>
+                    <input type="datetime-local" id="date_execution" name="date_execution" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="promo_code">Promo Code (Optional):</label>
+                    <input type="text" id="promo_code" name="promo_code" class="form-control" placeholder="Enter code here...">
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <button type="submit" name="action" value="place_order" class="btn-submit btn-order">Place Order (Pay Later)</button>
+                    <button type="submit" name="action" value="pay_now" class="btn-submit btn-pay">Pay Now</button>
+                </div>
+            </form>
+        </div>
+    {% else %}
+        <div class="cart-card" style="text-align: center; padding: 50px;">
+            <p style="font-size: 1.2em; color: #64748b;">Your cart is currently empty.</p>
+            <a href="{% url 'content:catalog' %}" style="display: inline-block; background: var(--primary); color: white; padding: 12px 25px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px;">Return to Catalog</a>
+        </div>
+    {% endif %}
+
+    {% if new_orders %}
+        <h2 style="margin-top: 40px; color: var(--primary); border-bottom: 2px solid var(--border-color); padding-bottom: 10px;">Pending Orders (Awaiting Payment)</h2>
+        <div class="cart-card" style="padding: 0; overflow: hidden;">
+            <table style="margin-bottom: 0; border: none;">
+                <thead>
+                    <tr>
+                        <th style="background: white;">Order ID</th>
+                        <th style="background: white;">Address</th>
+                        <th style="background: white;">Date Created</th>
+                        <th style="background: white;">Execution Date</th>
+                        <th style="background: white;">Total</th>
+                        <th style="background: white;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in new_orders %}
+                    <tr>
+                        <td>#{{ order.id }}</td>
+                        <td>{{ order.address }}</td>
+                        <td>{{ order.date_created|date:"d M Y, H:i" }}</td>
+                        <td>{{ order.date_execution|date:"d M Y, H:i" }}</td>
+                        <td style="font-weight: bold; color: #10b981;">{{ order.get_total_cost }} BYN</td>
+                        <td><span class="status-badge">{{ order.get_status_display }}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

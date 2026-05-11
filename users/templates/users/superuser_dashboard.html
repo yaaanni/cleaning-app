@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superuser Dashboard - Cleaning Company</title>
+    <style>
+        :root { --primary: #4361ee; --bg-color: #f8fafc; --text-main: #333; --card-bg: #ffffff; --border-color: #e2e8f0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; line-height: 1.6; }
+
+        nav { background-color: white; padding: 15px 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; flex-grow: 1; width: 100%; box-sizing: border-box; }
+        h1 { border-bottom: 3px solid #ef4444; padding-bottom: 10px; display: inline-block; margin-bottom: 30px; color: #ef4444;}
+
+        .card { background: var(--card-bg); border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border-color); margin-bottom: 30px; }
+        .card h2 { margin-top: 0; color: var(--primary); border-bottom: 2px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; font-size: 1.2em; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.95em; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { background: #f1f5f9; color: #475569; }
+
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #475569; }
+        .form-control { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; }
+        .btn-submit { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+
+        .client-group { background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #e2e8f0; }
+        .client-group h3 { margin-top: 0; color: #1e293b; font-size: 1.1em; }
+
+        footer { background: white; text-align: center; padding: 20px; border-top: 1px solid #ddd; font-size: 0.9em; color: #666; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <a href="/">Home</a>
+        <a href="{% url 'users:contacts' %}">Contacts</a>
+        <a href="/catalog/">Catalog</a>
+        <a href="/admin/" style="color: #ef4444; margin-left: 20px;">Manage DB (Admin)</a>
+    </div>
+
+    <div class="nav-right">
+        <span style="color: #64748b; font-weight: bold;">Superuser: {{ user.username }}</span>
+        <form action="{% url 'users:logout' %}" method="post" style="margin: 0;">
+            {% csrf_token %}
+            <button type="submit" style="background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit;">
+                Logout
+            </button>
+        </form>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Superuser Analytics Dashboard</h1>
+
+    <div class="card">
+        <h2>1. Planned Works (Grouped by Client, Sorted by Date)</h2>
+        {% regroup planned_orders by client as grouped_orders %}
+
+        {% for group in grouped_orders %}
+            <div class="client-group">
+                <h3>Client: {{ group.grouper.user.first_name }} {{ group.grouper.user.last_name }} ({{ group.grouper.phone }})</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Execution Date</th>
+                            <th>Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in group.list %}
+                            <tr>
+                                <td>{{ order.date_execution|date:"d M Y, H:i" }}</td>
+                                <td>{{ order.address }}</td>
+                                <td>{{ order.get_status_display }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% empty %}
+            <p style="color: #64748b;">No planned works found.</p>
+        {% endfor %}
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <h2>2. Client Revenue Report</h2>
+            <form method="GET" style="margin-bottom: 20px;">
+                <div class="form-group">
+                    <label>Select Client:</label>
+                    <select name="client_id" class="form-control" required>
+                        <option value="">-- Choose Client --</option>
+                        {% for client in all_clients %}
+                            <option value="{{ client.id }}" {% if request.GET.client_id == client.id|stringformat:"i" %}selected{% endif %}>
+                                {{ client.user.first_name }} {{ client.user.last_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Start Date:</label>
+                    <input type="datetime-local" name="start_date" class="form-control" value="{{ request.GET.start_date }}" required>
+                </div>
+                <div class="form-group">
+                    <label>End Date:</label>
+                    <input type="datetime-local" name="end_date" class="form-control" value="{{ request.GET.end_date }}" required>
+                </div>
+                <button type="submit" class="btn-submit">Generate Report</button>
+            </form>
+
+            {% if report_client %}
+                <div style="background: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                    <h3 style="margin-top: 0; color: #1e40af;">Report Result</h3>
+                    <p><strong>Client:</strong> {{ report_client.user.first_name }} {{ report_client.user.last_name }}</p>
+                    <p><strong>Period:</strong> {{ report_start }} to {{ report_end }}</p>
+                    <p><strong>Total Services Cost:</strong> <span style="font-size: 1.5em; color: #10b981; font-weight: bold;">{{ report_client_cost }} BYN</span></p>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="card">
+            <h2>3. Clients by Employee</h2>
+            <form method="GET" style="margin-bottom: 20px;">
+                <div class="form-group">
+                    <label>Select Employee:</label>
+                    <select name="employee_id" class="form-control" required>
+                        <option value="">-- Choose Employee --</option>
+                        {% for emp in all_employees %}
+                            <option value="{{ emp.id }}" {% if request.GET.employee_id == emp.id|stringformat:"i" %}selected{% endif %}>
+                                {{ emp.user.first_name }} {{ emp.user.last_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Find Clients</button>
+            </form>
+
+            {% if report_employee %}
+                <div style="background: #eff6ff; padding: 15px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                    <h3 style="margin-top: 0; color: #1e40af;">Clients working with {{ report_employee.user.first_name }}</h3>
+                    {% if report_employee_clients %}
+                        <ul style="margin: 0; padding-left: 20px;">
+                            {% for c in report_employee_clients %}
+                                <li>{{ c.user.first_name }} {{ c.user.last_name }} ({{ c.phone }})</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p style="color: #ef4444; margin: 0;">No clients found for this employee.</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>4. Current Active Services Catalog</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Service Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for service in services %}
+                <tr>
+                    <td>{{ service.service_type.name }}</td>
+                    <td>{{ service.name }}</td>
+                    <td>{{ service.price }} BYN</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

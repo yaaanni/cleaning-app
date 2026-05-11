@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: cleaning_db
+    restart: always
+    environment:
+      POSTGRES_DB: cleaning_db
+      POSTGRES_USER: cleaning_user
+      POSTGRES_PASSWORD: cleaning_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    image: yaaanni/cleaning_app:latest
+    build: .
+    container_name: cleaning_web
+    command: >
+      bash -c "python manage.py migrate &&
+               python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=cleaning_db
+      - DB_USER=cleaning_user
+      - DB_PASSWORD=cleaning_password
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

@@ -1,0 +1,1606 @@
+2026-05-11 23:23:23,358 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-05-11 23:23:33,193 [INFO] content.views: Promo codes list accessed
+2026-05-11 23:23:33,193 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-11 23:23:33,197 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-05-11 23:23:33,614 [INFO] content.views: Reviews page accessed
+2026-05-11 23:50:18,983 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:18,989 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:18,990 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:50:18,995 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:50:18,997 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:50:19,000 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:50:19,000 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:19,001 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:50:19,003 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:50:19,004 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:50:19,008 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:50:19,008 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:19,008 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:50:19,009 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:50:19,009 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:50:19,014 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:50:19,015 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:19,015 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:50:19,016 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:50:19,016 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:50:19,016 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:50:19,017 [INFO] cleaning.models: Total cost calculated for Order #1: 150.00 BYN (Promo: None)
+2026-05-11 23:50:19,022 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:50:19,022 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:19,023 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:50:19,024 [INFO] content.models: PromoCode 'DISCOUNT10' (Discount: 10%) created. Archived: False
+2026-05-11 23:50:19,024 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:50:19,025 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:50:19,026 [INFO] cleaning.models: Total cost calculated for Order #1: 90.00 BYN (Promo: DISCOUNT10)
+2026-05-11 23:50:27,048 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:50:27,049 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:50:27,049 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:27,049 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:50:27,050 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:50:27,050 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:50:27,050 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:50:27,051 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:50:27,051 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:50:27,051 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:50:27,188 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:50:27,188 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-11 23:50:27,192 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:50:27,192 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:50:27,193 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:27,193 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:50:27,194 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:50:27,194 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:50:27,195 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:50:27,195 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:50:27,195 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:50:27,196 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:50:27,293 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:50:27,294 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-11 23:50:27,296 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:50:27,297 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:50:27,297 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:27,297 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:50:27,298 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:50:27,298 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:50:27,298 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:50:27,299 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:50:27,299 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:50:27,300 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:50:27,393 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:50:27,394 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-11 23:50:27,398 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:50:27,398 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-11 23:50:27,400 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:50:27,400 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-11 23:50:27,406 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:50:27,406 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-11 23:50:27,409 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:50:27,409 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-11 23:50:31,790 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-11 23:50:31,791 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-11 23:50:31,791 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-11 23:50:31,792 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-11 23:50:31,794 [INFO] cleaning.views: Initializing Home Dashboard view context
+2026-05-11 23:50:31,794 [INFO] cleaning.views: Searching clients with query: Ander
+2026-05-11 23:50:31,794 [INFO] cleaning.views: Sorting clients by: -user__last_name
+2026-05-11 23:50:31,794 [INFO] cleaning.views: Requesting external API data and statistics
+2026-05-11 23:50:31,794 [INFO] cleaning.views: Calculating system time and calendar data
+2026-05-11 23:50:31,795 [INFO] cleaning.views: Home Dashboard context preparation complete
+2026-05-11 23:50:31,800 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-11 23:50:31,800 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-11 23:50:31,800 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-11 23:50:31,801 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-11 23:50:31,801 [INFO] cleaning.views: Fetching active vacancies from database
+2026-05-11 23:50:31,802 [INFO] cleaning.views: Found 1 active vacancies
+2026-05-11 23:50:36,632 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:50:36,633 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:50:36,633 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:36,633 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:50:36,633 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:50:36,634 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:50:36,634 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:50:36,635 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:50:36,635 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:50:36,635 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:50:36,754 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:50:36,755 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-11 23:50:36,758 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:50:36,759 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:50:36,759 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:36,759 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:50:36,760 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:50:36,760 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:50:36,760 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:50:36,761 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:50:36,761 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:50:36,761 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:50:36,847 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:50:36,848 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-11 23:50:36,851 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:50:36,851 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:50:36,852 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:50:36,852 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:50:36,852 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:50:36,853 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:50:36,854 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:50:36,854 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:50:36,854 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:50:36,855 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:50:36,937 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:50:36,938 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-11 23:50:36,942 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:50:36,942 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-11 23:50:36,945 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:50:36,945 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-11 23:50:36,949 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:50:36,949 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-11 23:50:36,951 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:50:36,951 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-11 23:52:29,461 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:52:29,461 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:52:29,461 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:52:29,462 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:52:29,462 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:52:29,463 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:52:29,463 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:52:29,463 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:52:29,463 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:52:29,464 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:52:29,464 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:52:29,465 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:52:29,466 [INFO] cleaning.models: Total cost calculated for Order #1: 60.00 BYN (Promo: None)
+2026-05-11 23:52:29,466 [INFO] cleaning.models: Total cost calculated for Order #2: 50.00 BYN (Promo: None)
+2026-05-11 23:52:29,467 [INFO] cleaning.services: Statistics calculated for 2 orders and 1 clients
+2026-05-11 23:52:29,515 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:52:29,515 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-11 23:52:29,519 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:52:29,519 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:52:29,520 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:52:29,520 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:52:29,521 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:52:29,521 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:52:29,522 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:52:29,522 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:52:29,522 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:52:29,522 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:52:29,523 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:52:29,524 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:52:29,526 [INFO] cleaning.services: Analysis complete. Popular: Standard Cleaning, Profitable: Standard Cleaning
+2026-05-11 23:52:29,529 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:52:29,529 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-11 23:52:29,532 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:52:29,532 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:52:29,532 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:52:29,533 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:52:29,533 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:52:29,534 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:52:29,534 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:52:29,535 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:52:29,535 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:52:29,536 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:52:29,536 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:52:29,537 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:52:29,662 [INFO] cleaning.services: Matplotlib chart successfully generated and encoded to base64
+2026-05-11 23:52:29,665 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:52:29,665 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-11 23:52:29,668 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:52:29,668 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-11 23:52:29,671 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:52:29,671 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-11 23:52:29,674 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:52:29,675 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-11 23:52:29,677 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:52:29,677 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-11 23:53:50,750 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:53:50,750 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:53:50,750 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:53:50,751 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:53:50,751 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:53:50,752 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:53:50,752 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:53:50,752 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:53:50,752 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:53:50,753 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:53:50,753 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:53:50,754 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:53:50,755 [INFO] cleaning.models: Total cost calculated for Order #1: 60.00 BYN (Promo: None)
+2026-05-11 23:53:50,755 [INFO] cleaning.models: Total cost calculated for Order #2: 50.00 BYN (Promo: None)
+2026-05-11 23:53:50,756 [INFO] cleaning.services: Statistics calculated for 2 orders and 1 clients
+2026-05-11 23:53:50,760 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:53:50,760 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-11 23:53:50,763 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:53:50,764 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:53:50,764 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:53:50,764 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:53:50,764 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:53:50,765 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:53:50,765 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:53:50,766 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:53:50,766 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:53:50,766 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:53:50,766 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:53:50,767 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:53:50,769 [INFO] cleaning.services: Analysis complete. Popular: Standard Cleaning, Profitable: Standard Cleaning
+2026-05-11 23:53:50,772 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:53:50,772 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-11 23:53:50,776 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:53:50,776 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:53:50,776 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:53:50,777 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:53:50,777 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:53:50,777 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:53:50,778 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:53:50,778 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:53:50,778 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:53:50,779 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:53:50,779 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:53:50,780 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:53:50,891 [INFO] cleaning.services: Matplotlib chart successfully generated and encoded to base64
+2026-05-11 23:53:50,894 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:53:50,894 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-11 23:53:50,898 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:53:50,898 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-11 23:53:50,900 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:53:50,900 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-11 23:53:50,903 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:53:50,903 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-11 23:53:50,906 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:53:50,906 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-11 23:58:26,489 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,494 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,496 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:58:26,502 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:58:26,503 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:58:26,509 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:58:26,510 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,510 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:58:26,512 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:58:26,512 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:58:26,519 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:58:26,520 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,521 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:58:26,522 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:58:26,522 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:58:26,528 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:58:26,529 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,530 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:58:26,531 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:58:26,532 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:58:26,532 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:58:26,534 [INFO] cleaning.models: Total cost calculated for Order #1: 150.00 BYN (Promo: None)
+2026-05-11 23:58:26,539 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-11 23:58:26,540 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,540 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-11 23:58:26,541 [INFO] content.models: PromoCode 'DISCOUNT10' (Discount: 10%) created. Archived: False
+2026-05-11 23:58:26,544 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-11 23:58:26,544 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-11 23:58:26,545 [INFO] cleaning.models: Total cost calculated for Order #1: 90.00 BYN (Promo: DISCOUNT10)
+2026-05-11 23:58:26,553 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:58:26,554 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:58:26,554 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,555 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:58:26,555 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:58:26,556 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:58:26,557 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:58:26,558 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:58:26,558 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:58:26,558 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:58:26,559 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:58:26,561 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:58:26,563 [INFO] cleaning.models: Total cost calculated for Order #1: 60.00 BYN (Promo: None)
+2026-05-11 23:58:26,565 [INFO] cleaning.models: Total cost calculated for Order #2: 50.00 BYN (Promo: None)
+2026-05-11 23:58:26,568 [INFO] cleaning.services: Statistics calculated for 2 orders and 1 clients
+2026-05-11 23:58:26,573 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-11 23:58:26,574 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-11 23:58:26,580 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:58:26,581 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:58:26,581 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,582 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:58:26,582 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:58:26,583 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:58:26,584 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:58:26,584 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:58:26,585 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:58:26,585 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:58:26,586 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:58:26,587 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:58:26,591 [INFO] cleaning.services: Analysis complete. Popular: Standard Cleaning, Profitable: Standard Cleaning
+2026-05-11 23:58:26,596 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-11 23:58:26,597 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-11 23:58:26,604 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-11 23:58:26,604 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-11 23:58:26,605 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-11 23:58:26,605 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-11 23:58:26,606 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-11 23:58:26,607 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-11 23:58:26,607 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-11 23:58:26,608 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-11 23:58:26,609 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:58:26,609 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-11 23:58:26,610 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-11 23:58:26,611 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:58:26,786 [INFO] cleaning.services: Matplotlib chart successfully generated and encoded to base64
+2026-05-11 23:58:26,791 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-11 23:58:26,792 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-11 23:58:26,798 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-11 23:58:26,798 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-11 23:58:26,799 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-11 23:58:26,799 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-11 23:58:26,806 [INFO] cleaning.views: Initializing Home Dashboard view context
+2026-05-11 23:58:26,806 [INFO] cleaning.views: Searching clients with query: Ander
+2026-05-11 23:58:26,807 [INFO] cleaning.views: Sorting clients by: -user__last_name
+2026-05-11 23:58:26,807 [INFO] cleaning.views: Requesting external API data and statistics
+2026-05-11 23:58:26,808 [INFO] cleaning.views: Calculating system time and calendar data
+2026-05-11 23:58:26,808 [INFO] cleaning.views: Home Dashboard context preparation complete
+2026-05-11 23:58:26,817 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-11 23:58:26,818 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-11 23:58:26,818 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-11 23:58:26,818 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-11 23:58:26,819 [INFO] cleaning.views: Fetching active vacancies from database
+2026-05-11 23:58:26,820 [INFO] cleaning.views: Found 1 active vacancies
+2026-05-11 23:58:26,827 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:58:26,828 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-11 23:58:26,832 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-11 23:58:26,833 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-11 23:58:26,839 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:58:26,840 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-11 23:58:26,844 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-11 23:58:26,844 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-12 00:03:20,728 [INFO] content.models: Company information created
+2026-05-12 00:03:20,732 [INFO] content.models: History milestone for year 2025 added
+2026-05-12 00:03:20,732 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:20,735 [INFO] content.models: News article 'Winter Discount' published
+2026-05-12 00:03:20,738 [INFO] content.models: FAQ item created: How to pay?
+2026-05-12 00:03:20,741 [INFO] content.models: Vacancy 'Driver' posted. Active status: True
+2026-05-12 00:03:20,745 [INFO] users.models: Client profile reviewer created (Type: individual)
+2026-05-12 00:03:20,746 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:03:20,751 [INFO] content.models: PromoCode 'CLEAN2026' (Discount: 15%) created. Archived: False
+2026-05-12 00:03:23,700 [INFO] content.models: PromoCode 'ACTIVE_1' (Discount: 10%) created. Archived: False
+2026-05-12 00:03:23,701 [INFO] content.models: PromoCode 'ACTIVE_2' (Discount: 20%) created. Archived: False
+2026-05-12 00:03:23,701 [INFO] content.models: PromoCode 'OLD_CODE' (Discount: 5%) created. Archived: True
+2026-05-12 00:03:23,701 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:03:23,702 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-05-12 00:03:23,706 [INFO] content.models: PromoCode 'MID' (Discount: 15%) created. Archived: False
+2026-05-12 00:03:23,706 [INFO] content.models: PromoCode 'LOW' (Discount: 5%) created. Archived: False
+2026-05-12 00:03:23,706 [INFO] content.models: PromoCode 'HIGH' (Discount: 30%) created. Archived: False
+2026-05-12 00:03:23,706 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:03:23,707 [INFO] content.services: Successfully categorized 3 active and 0 archived promo codes
+2026-05-12 00:03:23,710 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:03:23,711 [INFO] content.services: Successfully categorized 0 active and 0 archived promo codes
+2026-05-12 00:03:23,715 [INFO] content.models: PromoCode 'ARCH_1' (Discount: 10%) created. Archived: True
+2026-05-12 00:03:23,715 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:03:23,716 [INFO] content.services: Successfully categorized 0 active and 1 archived promo codes
+2026-05-12 00:03:26,686 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:03:26,686 [INFO] content.models: Company information created
+2026-05-12 00:03:26,687 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:26,687 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:03:26,687 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:03:27,202 [INFO] content.views: Public home page accessed
+2026-05-12 00:03:27,218 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:03:27,219 [INFO] content.models: Company information created
+2026-05-12 00:03:27,219 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:27,219 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:03:27,220 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:03:27,221 [INFO] content.views: About company page accessed
+2026-05-12 00:03:27,227 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:03:27,227 [INFO] content.models: Company information created
+2026-05-12 00:03:27,228 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:27,228 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:03:27,228 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:03:27,231 [INFO] content.views: Fetching news list
+2026-05-12 00:03:27,236 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:03:27,236 [INFO] content.models: Company information created
+2026-05-12 00:03:27,237 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:27,237 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:03:27,237 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:03:27,239 [INFO] content.views: News article accessed: News 1
+2026-05-12 00:03:27,244 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:03:27,244 [INFO] content.models: Company information created
+2026-05-12 00:03:27,244 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:27,245 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:03:27,245 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:03:27,246 [INFO] content.views: Fetching FAQ list
+2026-05-12 00:03:27,251 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:03:27,251 [INFO] content.models: Company information created
+2026-05-12 00:03:27,252 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:03:27,252 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:03:27,252 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:03:27,253 [INFO] content.views: Fetching active vacancies
+2026-05-12 00:03:28,139 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:03:29,005 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:03:29,005 [INFO] content.views: New review submitted by client: client_user
+2026-05-12 00:03:29,010 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:03:29,010 [INFO] cleaning.models: Service created: Cheap (Price: 10)
+2026-05-12 00:03:29,011 [INFO] cleaning.models: Service created: Expensive (Price: 100)
+2026-05-12 00:03:29,011 [INFO] content.views: Catalog accessed with filters - min_price: 50, max_price: 150
+2026-05-12 00:03:29,950 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:03:30,833 [INFO] cleaning.models: ServiceType created: Type
+2026-05-12 00:03:30,833 [INFO] cleaning.models: Service created: Service (Price: 50)
+2026-05-12 00:03:30,836 [INFO] content.views: Service 'Service' added to cart by client_user
+2026-05-12 00:03:31,713 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:03:32,560 [INFO] content.views: Service ID 1 removed from cart by client_user
+2026-05-12 00:03:33,426 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:03:34,287 [INFO] users.models: Employee profile staff_user created (ID: 1)
+2026-05-12 00:03:35,210 [INFO] cleaning.models: ServiceType created: Windows
+2026-05-12 00:03:35,210 [INFO] cleaning.models: Service created: Window Cleaning (Price: 80)
+2026-05-12 00:03:35,211 [INFO] users.models: Specialization 'WindowSpec' created (ID: 1)
+2026-05-12 00:04:57,454 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:04:57,455 [INFO] content.models: Company information created
+2026-05-12 00:04:57,455 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:04:57,455 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:04:57,456 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:04:57,944 [INFO] content.views: Public home page accessed
+2026-05-12 00:04:57,956 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:04:57,957 [INFO] content.models: Company information created
+2026-05-12 00:04:57,957 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:04:57,957 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:04:57,958 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:04:57,959 [INFO] content.views: About company page accessed
+2026-05-12 00:04:57,964 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:04:57,964 [INFO] content.models: Company information created
+2026-05-12 00:04:57,965 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:04:57,965 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:04:57,965 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:04:57,966 [INFO] content.views: Fetching news list
+2026-05-12 00:04:57,971 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:04:57,971 [INFO] content.models: Company information created
+2026-05-12 00:04:57,972 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:04:57,972 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:04:57,972 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:04:57,974 [INFO] content.views: News article accessed: News 1
+2026-05-12 00:04:57,978 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:04:57,978 [INFO] content.models: Company information created
+2026-05-12 00:04:57,978 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:04:57,979 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:04:57,979 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:04:57,980 [INFO] content.views: Fetching FAQ list
+2026-05-12 00:04:57,984 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:04:57,985 [INFO] content.models: Company information created
+2026-05-12 00:04:57,985 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:04:57,985 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:04:57,986 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:04:57,987 [INFO] content.views: Fetching active vacancies
+2026-05-12 00:04:58,635 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:04:59,283 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:04:59,283 [INFO] content.views: New review submitted by client: client_user
+2026-05-12 00:04:59,286 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:04:59,286 [INFO] cleaning.models: Service created: Cheap (Price: 10)
+2026-05-12 00:04:59,286 [INFO] cleaning.models: Service created: Expensive (Price: 100)
+2026-05-12 00:04:59,287 [INFO] content.views: Catalog accessed with filters - min_price: 50, max_price: 150
+2026-05-12 00:04:59,937 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:05:00,668 [INFO] cleaning.models: ServiceType created: Type
+2026-05-12 00:05:00,668 [INFO] cleaning.models: Service created: Service (Price: 50)
+2026-05-12 00:05:00,670 [INFO] content.views: Service 'Service' added to cart by client_user
+2026-05-12 00:05:01,318 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:05:01,967 [INFO] content.views: Service ID 1 removed from cart by client_user
+2026-05-12 00:05:02,623 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:05:03,262 [INFO] users.models: Employee profile staff_user created (ID: 1)
+2026-05-12 00:05:03,908 [INFO] cleaning.models: ServiceType created: Windows
+2026-05-12 00:05:03,909 [INFO] cleaning.models: Service created: Window Cleaning (Price: 80)
+2026-05-12 00:05:03,909 [INFO] users.models: Specialization 'WindowSpec' created (ID: 1)
+2026-05-12 00:05:03,912 [INFO] content.views: Processing checkout for client_user. Address: Minsk, Main Str 1, Action: pay_later
+2026-05-12 00:05:03,915 [INFO] content.views: Employee staff_user selected for order
+2026-05-12 00:05:03,916 [INFO] cleaning.models: Order #1 created. Status: new, Client: client_user
+2026-05-12 00:05:03,916 [INFO] cleaning.models: Price frozen for OrderItem: Window Cleaning at 80.00 BYN
+2026-05-12 00:05:03,917 [INFO] content.views: Order #1 successfully created for client client_user
+2026-05-12 00:14:38,738 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:14:38,739 [INFO] content.models: Company information created
+2026-05-12 00:14:38,739 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:14:38,739 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:14:38,739 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:14:39,235 [INFO] content.views: Public home page accessed
+2026-05-12 00:14:39,249 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:14:39,249 [INFO] content.models: Company information created
+2026-05-12 00:14:39,249 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:14:39,250 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:14:39,250 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:14:39,251 [INFO] content.views: About company page accessed
+2026-05-12 00:14:39,257 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:14:39,258 [INFO] content.models: Company information created
+2026-05-12 00:14:39,258 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:14:39,258 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:14:39,258 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:14:39,260 [INFO] content.views: Fetching news list
+2026-05-12 00:14:39,264 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:14:39,264 [INFO] content.models: Company information created
+2026-05-12 00:14:39,265 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:14:39,265 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:14:39,265 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:14:39,267 [INFO] content.views: News article accessed: News 1
+2026-05-12 00:14:39,272 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:14:39,273 [INFO] content.models: Company information created
+2026-05-12 00:14:39,273 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:14:39,273 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:14:39,274 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:14:39,275 [INFO] content.views: Fetching FAQ list
+2026-05-12 00:14:39,280 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:14:39,281 [INFO] content.models: Company information created
+2026-05-12 00:14:39,281 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:14:39,281 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:14:39,281 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:14:39,282 [INFO] content.views: Fetching active vacancies
+2026-05-12 00:14:39,971 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:14:40,641 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:14:40,641 [INFO] content.views: New review submitted by client: client_user
+2026-05-12 00:14:40,645 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:14:40,645 [INFO] cleaning.models: Service created: Cheap (Price: 10)
+2026-05-12 00:14:40,646 [INFO] cleaning.models: Service created: Expensive (Price: 100)
+2026-05-12 00:14:40,646 [INFO] content.views: Catalog accessed with filters - min_price: 50, max_price: 150
+2026-05-12 00:14:41,442 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:14:42,251 [INFO] cleaning.models: ServiceType created: Type
+2026-05-12 00:14:42,251 [INFO] cleaning.models: Service created: Service (Price: 50)
+2026-05-12 00:14:42,253 [INFO] content.views: Service 'Service' added to cart by client_user
+2026-05-12 00:14:42,938 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:14:43,618 [INFO] content.views: Service ID 1 removed from cart by client_user
+2026-05-12 00:14:44,309 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:14:44,991 [INFO] users.models: Employee profile staff_user created (ID: 1)
+2026-05-12 00:14:45,677 [INFO] cleaning.models: ServiceType created: Windows
+2026-05-12 00:14:45,678 [INFO] cleaning.models: Service created: Window Cleaning (Price: 80)
+2026-05-12 00:14:45,678 [INFO] users.models: Specialization 'WindowSpec' created (ID: 1)
+2026-05-12 00:14:45,681 [INFO] content.views: Processing checkout for client_user. Address: Minsk, Main Str 1, Action: pay_later
+2026-05-12 00:14:45,684 [INFO] content.views: Employee staff_user selected for order
+2026-05-12 00:14:45,685 [INFO] cleaning.models: Order #1 created. Status: new, Client: client_user
+2026-05-12 00:14:45,685 [INFO] cleaning.models: Price frozen for OrderItem: Window Cleaning at 80.00 BYN
+2026-05-12 00:14:45,686 [INFO] content.views: Order #1 successfully created for client client_user
+2026-05-12 00:16:06,368 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:16:06,369 [INFO] content.models: Company information created
+2026-05-12 00:16:06,369 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:06,369 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:16:06,370 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:16:06,870 [INFO] content.views: Public home page accessed
+2026-05-12 00:16:06,883 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:16:06,883 [INFO] content.models: Company information created
+2026-05-12 00:16:06,883 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:06,884 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:16:06,884 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:16:06,885 [INFO] content.views: About company page accessed
+2026-05-12 00:16:06,891 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:16:06,891 [INFO] content.models: Company information created
+2026-05-12 00:16:06,891 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:06,892 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:16:06,892 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:16:06,894 [INFO] content.views: Fetching news list
+2026-05-12 00:16:06,899 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:16:06,899 [INFO] content.models: Company information created
+2026-05-12 00:16:06,900 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:06,900 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:16:06,900 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:16:06,902 [INFO] content.views: News article accessed: News 1
+2026-05-12 00:16:06,906 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:16:06,907 [INFO] content.models: Company information created
+2026-05-12 00:16:06,907 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:06,907 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:16:06,907 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:16:06,909 [INFO] content.views: Fetching FAQ list
+2026-05-12 00:16:06,913 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:16:06,914 [INFO] content.models: Company information created
+2026-05-12 00:16:06,914 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:06,914 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:16:06,915 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:16:06,916 [INFO] content.views: Fetching active vacancies
+2026-05-12 00:16:07,569 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:16:08,226 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:16:08,227 [INFO] content.views: New review submitted by client: client_user
+2026-05-12 00:16:08,230 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:16:08,231 [INFO] cleaning.models: Service created: Cheap (Price: 10)
+2026-05-12 00:16:08,231 [INFO] cleaning.models: Service created: Expensive (Price: 100)
+2026-05-12 00:16:08,231 [INFO] content.views: Catalog accessed with filters - min_price: 50, max_price: 150
+2026-05-12 00:16:08,893 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:16:09,640 [INFO] cleaning.models: ServiceType created: Type
+2026-05-12 00:16:09,640 [INFO] cleaning.models: Service created: Service (Price: 50)
+2026-05-12 00:16:09,642 [INFO] content.views: Service 'Service' added to cart by client_user
+2026-05-12 00:16:10,332 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:16:11,005 [INFO] content.views: Service ID 1 removed from cart by client_user
+2026-05-12 00:16:11,670 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:16:12,309 [INFO] users.models: Employee profile staff_user created (ID: 1)
+2026-05-12 00:16:12,951 [INFO] cleaning.models: ServiceType created: Windows
+2026-05-12 00:16:12,952 [INFO] cleaning.models: Service created: Window Cleaning (Price: 80)
+2026-05-12 00:16:12,952 [INFO] users.models: Specialization 'WindowSpec' created (ID: 1)
+2026-05-12 00:16:12,955 [INFO] content.views: Processing checkout for client_user. Address: Minsk, Main Str 1, Action: pay_later
+2026-05-12 00:16:12,958 [INFO] content.views: Employee staff_user selected for order
+2026-05-12 00:16:12,959 [INFO] cleaning.models: Order #1 created. Status: new, Client: client_user
+2026-05-12 00:16:12,959 [INFO] cleaning.models: Price frozen for OrderItem: Window Cleaning at 80.00 BYN
+2026-05-12 00:16:12,959 [INFO] content.views: Order #1 successfully created for client client_user
+2026-05-12 00:16:23,299 [INFO] content.models: PromoCode 'ACTIVE_1' (Discount: 10%) created. Archived: False
+2026-05-12 00:16:23,299 [INFO] content.models: PromoCode 'ACTIVE_2' (Discount: 20%) created. Archived: False
+2026-05-12 00:16:23,299 [INFO] content.models: PromoCode 'OLD_CODE' (Discount: 5%) created. Archived: True
+2026-05-12 00:16:23,299 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:16:23,300 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-05-12 00:16:23,304 [INFO] content.models: PromoCode 'MID' (Discount: 15%) created. Archived: False
+2026-05-12 00:16:23,304 [INFO] content.models: PromoCode 'LOW' (Discount: 5%) created. Archived: False
+2026-05-12 00:16:23,304 [INFO] content.models: PromoCode 'HIGH' (Discount: 30%) created. Archived: False
+2026-05-12 00:16:23,305 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:16:23,305 [INFO] content.services: Successfully categorized 3 active and 0 archived promo codes
+2026-05-12 00:16:23,309 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:16:23,310 [INFO] content.services: Successfully categorized 0 active and 0 archived promo codes
+2026-05-12 00:16:23,313 [INFO] content.models: PromoCode 'ARCH_1' (Discount: 10%) created. Archived: True
+2026-05-12 00:16:23,313 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:16:23,314 [INFO] content.services: Successfully categorized 0 active and 1 archived promo codes
+2026-05-12 00:16:26,434 [INFO] content.models: Company information created
+2026-05-12 00:16:26,437 [INFO] content.models: History milestone for year 2025 added
+2026-05-12 00:16:26,438 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:16:26,443 [INFO] content.models: News article 'Winter Discount' published
+2026-05-12 00:16:26,448 [INFO] content.models: FAQ item created: How to pay?
+2026-05-12 00:16:26,452 [INFO] content.models: Vacancy 'Driver' posted. Active status: True
+2026-05-12 00:16:26,458 [INFO] users.models: Client profile reviewer created (Type: individual)
+2026-05-12 00:16:26,459 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:16:26,464 [INFO] content.models: PromoCode 'CLEAN2026' (Discount: 15%) created. Archived: False
+2026-05-12 00:21:26,494 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,499 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,500 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:21:26,505 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:21:26,507 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:21:26,511 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:21:26,512 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,513 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:21:26,514 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:21:26,514 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:21:26,520 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:21:26,521 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,521 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:21:26,523 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:21:26,523 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:21:26,529 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:21:26,529 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,530 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:21:26,531 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:21:26,531 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:21:26,532 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:21:26,533 [INFO] cleaning.models: Total cost calculated for Order #1: 150.00 BYN (Promo: None)
+2026-05-12 00:21:26,539 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:21:26,540 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,541 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:21:26,542 [INFO] content.models: PromoCode 'DISCOUNT10' (Discount: 10%) created. Archived: False
+2026-05-12 00:21:26,543 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:21:26,543 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:21:26,544 [INFO] cleaning.models: Total cost calculated for Order #1: 90.00 BYN (Promo: DISCOUNT10)
+2026-05-12 00:21:26,551 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-12 00:21:26,552 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-12 00:21:26,552 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,553 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-12 00:21:26,553 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-12 00:21:26,554 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-12 00:21:26,555 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-12 00:21:26,556 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-12 00:21:26,556 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:21:26,557 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-12 00:21:26,558 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:21:26,559 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-12 00:21:26,561 [INFO] cleaning.models: Total cost calculated for Order #1: 60.00 BYN (Promo: None)
+2026-05-12 00:21:26,562 [INFO] cleaning.models: Total cost calculated for Order #2: 50.00 BYN (Promo: None)
+2026-05-12 00:21:26,564 [INFO] cleaning.services: Statistics calculated for 2 orders and 1 clients
+2026-05-12 00:21:26,569 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-12 00:21:26,570 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-12 00:21:26,576 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-12 00:21:26,576 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-12 00:21:26,577 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,577 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-12 00:21:26,578 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-12 00:21:26,579 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-12 00:21:26,579 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-12 00:21:26,580 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-12 00:21:26,580 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:21:26,581 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-12 00:21:26,581 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:21:26,582 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-12 00:21:26,586 [INFO] cleaning.services: Analysis complete. Popular: Standard Cleaning, Profitable: Standard Cleaning
+2026-05-12 00:21:26,591 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-12 00:21:26,592 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-12 00:21:26,597 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-12 00:21:26,598 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-12 00:21:26,598 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:21:26,599 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-12 00:21:26,600 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-12 00:21:26,600 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-12 00:21:26,601 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-12 00:21:26,602 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-12 00:21:26,602 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:21:26,603 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-12 00:21:26,603 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:21:26,604 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-12 00:21:26,773 [INFO] cleaning.services: Matplotlib chart successfully generated and encoded to base64
+2026-05-12 00:21:26,778 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-12 00:21:26,779 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-12 00:21:26,786 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-12 00:21:26,786 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-12 00:21:26,787 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:26,787 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-12 00:21:26,794 [INFO] cleaning.views: Initializing Home Dashboard view context
+2026-05-12 00:21:26,794 [INFO] cleaning.views: Searching clients with query: Ander
+2026-05-12 00:21:26,795 [INFO] cleaning.views: Sorting clients by: -user__last_name
+2026-05-12 00:21:26,795 [INFO] cleaning.views: Requesting external API data and statistics
+2026-05-12 00:21:26,795 [INFO] cleaning.views: Calculating system time and calendar data
+2026-05-12 00:21:26,796 [INFO] cleaning.views: Home Dashboard context preparation complete
+2026-05-12 00:21:26,805 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-12 00:21:26,806 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-12 00:21:26,806 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:26,807 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-12 00:21:26,808 [INFO] cleaning.views: Fetching active vacancies from database
+2026-05-12 00:21:26,809 [INFO] cleaning.views: Found 1 active vacancies
+2026-05-12 00:21:26,817 [INFO] content.models: Company information created
+2026-05-12 00:21:26,824 [INFO] content.models: History milestone for year 2025 added
+2026-05-12 00:21:26,824 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:26,831 [INFO] content.models: News article 'Winter Discount' published
+2026-05-12 00:21:26,839 [INFO] content.models: FAQ item created: How to pay?
+2026-05-12 00:21:26,845 [INFO] content.models: Vacancy 'Driver' posted. Active status: True
+2026-05-12 00:21:26,850 [INFO] users.models: Client profile reviewer created (Type: individual)
+2026-05-12 00:21:26,852 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:21:26,858 [INFO] content.models: PromoCode 'CLEAN2026' (Discount: 15%) created. Archived: False
+2026-05-12 00:21:26,864 [INFO] content.models: PromoCode 'ACTIVE_1' (Discount: 10%) created. Archived: False
+2026-05-12 00:21:26,865 [INFO] content.models: PromoCode 'ACTIVE_2' (Discount: 20%) created. Archived: False
+2026-05-12 00:21:26,865 [INFO] content.models: PromoCode 'OLD_CODE' (Discount: 5%) created. Archived: True
+2026-05-12 00:21:26,865 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:21:26,867 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-05-12 00:21:26,875 [INFO] content.models: PromoCode 'MID' (Discount: 15%) created. Archived: False
+2026-05-12 00:21:26,876 [INFO] content.models: PromoCode 'LOW' (Discount: 5%) created. Archived: False
+2026-05-12 00:21:26,877 [INFO] content.models: PromoCode 'HIGH' (Discount: 30%) created. Archived: False
+2026-05-12 00:21:26,877 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:21:26,879 [INFO] content.services: Successfully categorized 3 active and 0 archived promo codes
+2026-05-12 00:21:26,887 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:21:26,889 [INFO] content.services: Successfully categorized 0 active and 0 archived promo codes
+2026-05-12 00:21:26,896 [INFO] content.models: PromoCode 'ARCH_1' (Discount: 10%) created. Archived: True
+2026-05-12 00:21:26,896 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:21:26,898 [INFO] content.services: Successfully categorized 0 active and 1 archived promo codes
+2026-05-12 00:21:26,906 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:21:26,907 [INFO] content.models: Company information created
+2026-05-12 00:21:26,907 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:26,908 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:21:26,908 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:26,998 [INFO] content.views: Public home page accessed
+2026-05-12 00:21:27,042 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:21:27,042 [INFO] content.models: Company information created
+2026-05-12 00:21:27,043 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:27,044 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:21:27,044 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:27,048 [INFO] content.views: About company page accessed
+2026-05-12 00:21:27,058 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:21:27,059 [INFO] content.models: Company information created
+2026-05-12 00:21:27,059 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:27,059 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:21:27,060 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:27,062 [INFO] content.views: Fetching news list
+2026-05-12 00:21:27,071 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:21:27,071 [INFO] content.models: Company information created
+2026-05-12 00:21:27,072 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:27,072 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:21:27,072 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:27,075 [INFO] content.views: News article accessed: News 1
+2026-05-12 00:21:27,084 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:21:27,085 [INFO] content.models: Company information created
+2026-05-12 00:21:27,086 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:27,086 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:21:27,087 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:27,089 [INFO] content.views: Fetching FAQ list
+2026-05-12 00:21:27,098 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:21:27,098 [INFO] content.models: Company information created
+2026-05-12 00:21:27,099 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:21:27,099 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:21:27,100 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:21:27,101 [INFO] content.views: Fetching active vacancies
+2026-05-12 00:21:27,779 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:21:28,448 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:21:28,448 [INFO] content.views: New review submitted by client: client_user
+2026-05-12 00:21:28,454 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:21:28,455 [INFO] cleaning.models: Service created: Cheap (Price: 10)
+2026-05-12 00:21:28,456 [INFO] cleaning.models: Service created: Expensive (Price: 100)
+2026-05-12 00:21:28,457 [INFO] content.views: Catalog accessed with filters - min_price: 50, max_price: 150
+2026-05-12 00:21:29,131 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:21:29,801 [INFO] cleaning.models: ServiceType created: Type
+2026-05-12 00:21:29,801 [INFO] cleaning.models: Service created: Service (Price: 50)
+2026-05-12 00:21:29,806 [INFO] content.views: Service 'Service' added to cart by client_user
+2026-05-12 00:21:30,482 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:21:31,159 [INFO] content.views: Service ID 1 removed from cart by client_user
+2026-05-12 00:21:31,837 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:21:32,509 [INFO] users.models: Employee profile staff_user created (ID: 1)
+2026-05-12 00:21:33,187 [INFO] cleaning.models: ServiceType created: Windows
+2026-05-12 00:21:33,188 [INFO] cleaning.models: Service created: Window Cleaning (Price: 80)
+2026-05-12 00:21:33,188 [INFO] users.models: Specialization 'WindowSpec' created (ID: 1)
+2026-05-12 00:21:33,194 [INFO] content.views: Processing checkout for client_user. Address: Minsk, Main Str 1, Action: pay_later
+2026-05-12 00:21:33,199 [INFO] content.views: Employee staff_user selected for order
+2026-05-12 00:21:33,200 [INFO] cleaning.models: Order #1 created. Status: new, Client: client_user
+2026-05-12 00:21:33,200 [INFO] cleaning.models: Price frozen for OrderItem: Window Cleaning at 80.00 BYN
+2026-05-12 00:21:33,201 [INFO] content.views: Order #1 successfully created for client client_user
+2026-05-12 00:21:33,213 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-12 00:21:33,213 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-12 00:21:33,217 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-12 00:21:33,217 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-12 00:21:33,224 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-12 00:21:33,225 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-12 00:21:33,229 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-12 00:21:33,229 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-12 00:24:32,543 [INFO] users.models: Specialization 'Plumber' created (ID: 1)
+2026-05-12 00:24:32,547 [INFO] users.models: Client profile testuser created (Type: individual)
+2026-05-12 00:24:32,549 [INFO] users.models: Client profile anon_user created (Type: individual)
+2026-05-12 00:24:32,555 [ERROR] users.models: Client validation error: Company name missing for legal entity (User: testuser)
+2026-05-12 00:24:32,558 [ERROR] users.models: Client validation error: Company name provided for individual (User: testuser)
+2026-05-12 00:24:32,561 [INFO] users.models: Specialization 'Cleaner' created (ID: 1)
+2026-05-12 00:24:32,561 [INFO] users.models: Employee profile testuser created (ID: 1)
+2026-05-12 00:24:32,567 [WARNING] users.models: Validation failed: User age is 14, which is under 18.
+2026-05-12 00:25:32,805 [INFO] users.models: Client profile test_client_user created (Type: individual)
+2026-05-12 00:25:32,806 [INFO] cleaning.models: Order #1 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,807 [INFO] cleaning.models: Order #2 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,807 [INFO] cleaning.models: Order #3 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,808 [INFO] users.services: Fetching orders for client: test_client_user (Search: '', Sort: -date_created)
+2026-05-12 00:25:32,810 [INFO] users.models: Client profile test_client_user created (Type: individual)
+2026-05-12 00:25:32,811 [INFO] cleaning.models: Order #1 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,811 [INFO] cleaning.models: Order #2 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,811 [INFO] cleaning.models: Order #3 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,812 [INFO] users.services: Fetching orders for client: test_client_user (Search: 'Apple', Sort: -date_created)
+2026-05-12 00:25:32,816 [INFO] users.models: Client profile test_client_user created (Type: individual)
+2026-05-12 00:25:32,817 [INFO] cleaning.models: Order #1 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,817 [INFO] cleaning.models: Order #2 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,817 [INFO] cleaning.models: Order #3 created. Status: new, Client: test_client_user
+2026-05-12 00:25:32,818 [INFO] users.services: Fetching orders for client: test_client_user (Search: '', Sort: address)
+2026-05-12 00:25:32,821 [INFO] users.services: Calculating financial statistics for client
+2026-05-12 00:25:32,822 [INFO] users.services: Statistics calculated: Total Spent = 450.0
+2026-05-12 00:25:32,825 [INFO] users.services: Calculating financial statistics for client
+2026-05-12 00:25:32,825 [WARNING] users.services: No paid orders found for statistics calculation
+2026-05-12 00:25:32,829 [INFO] users.services: Calculating financial statistics for client
+2026-05-12 00:25:32,829 [INFO] users.services: Multiple modes or no mode found in order costs
+2026-05-12 00:25:32,829 [INFO] users.services: Statistics calculated: Total Spent = 300.0
+2026-05-12 00:25:32,832 [INFO] users.services: Generating datetime and calendar info for user: time_user
+2026-05-12 00:25:32,836 [INFO] users.services: Requesting weather data from Open-Meteo API
+2026-05-12 00:25:32,837 [INFO] users.services: Requesting random advice from AdviceSlip API
+2026-05-12 00:25:32,840 [INFO] users.services: Requesting weather data from Open-Meteo API
+2026-05-12 00:25:32,840 [ERROR] users.services: External Weather API call failed
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/users/services.py", line 76, in get_external_apis_data
+    w_res = requests.get(weather_url, timeout=3)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Down
+2026-05-12 00:25:32,841 [INFO] users.services: Requesting random advice from AdviceSlip API
+2026-05-12 00:25:32,841 [ERROR] users.services: External Advice API call failed
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/users/services.py", line 87, in get_external_apis_data
+    a_res = requests.get(advice_url, timeout=3)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/users/services.py", line 76, in get_external_apis_data
+    w_res = requests.get(weather_url, timeout=3)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Down
+2026-05-12 00:27:00,660 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:01,335 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:02,856 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:02,857 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:02,857 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:02,857 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:02,859 [INFO] users.views: Contacts list page accessed
+2026-05-12 00:27:03,624 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:04,425 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:06,330 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:06,331 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:06,331 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:06,331 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:06,333 [INFO] users.views: Client profile accessed by user: c_user
+2026-05-12 00:27:06,334 [INFO] users.views: Client order filtering - Search: 'test', Sort: date
+2026-05-12 00:27:07,286 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:08,363 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:10,194 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:10,194 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:10,195 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:10,195 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:10,196 [INFO] users.views: Client profile accessed by user: n_user
+2026-05-12 00:27:10,197 [WARNING] users.views: User n_user tried to access client profile but has no profile object
+2026-05-12 00:27:11,088 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:11,955 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:13,695 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:13,695 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:13,696 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:13,696 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:13,697 [INFO] users.views: Employee profile accessed by user: e_user
+2026-05-12 00:27:13,699 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:27:13,699 [INFO] users.views: Employee e_user statistics - Total orders: 1, Completed: 1
+2026-05-12 00:27:14,615 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:15,503 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:17,235 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:17,236 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:17,236 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:17,236 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:17,237 [INFO] users.views: Employee profile accessed by user: n_user
+2026-05-12 00:27:17,238 [WARNING] users.views: User n_user tried to access employee dashboard without employee profile
+2026-05-12 00:27:18,120 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:18,976 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:20,701 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:20,702 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:20,702 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:20,702 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:21,714 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:22,587 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:24,380 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:24,381 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:24,381 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:24,381 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:24,382 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:27:25,288 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:26,147 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:27,907 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:27,908 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:27,908 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:27,909 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:27,910 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:27:27,910 [INFO] users.views: Generating revenue report for Client ID: 1 from 2000-01-01 to 2030-01-01
+2026-05-12 00:27:27,912 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:27:28,819 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:27:29,695 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:27:31,432 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:27:31,432 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:27:31,433 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:27:31,433 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:27:31,434 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:27:31,434 [INFO] users.views: Generating client list for Employee ID: 1
+2026-05-12 00:28:35,146 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:35,859 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:37,559 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:37,559 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:37,560 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:37,561 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:37,562 [INFO] users.views: Contacts list page accessed
+2026-05-12 00:28:38,443 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:39,312 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:41,081 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:41,082 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:41,083 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:41,083 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:41,085 [INFO] users.views: Client profile accessed by user: c_user
+2026-05-12 00:28:41,085 [INFO] users.views: Client order filtering - Search: 'test', Sort: date
+2026-05-12 00:28:41,989 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:42,850 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:44,561 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:44,561 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:44,562 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:44,562 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:44,563 [INFO] users.views: Client profile accessed by user: n_user
+2026-05-12 00:28:44,564 [WARNING] users.views: User n_user tried to access client profile but has no profile object
+2026-05-12 00:28:45,439 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:46,285 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:48,025 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:48,025 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:48,026 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:48,026 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:48,027 [INFO] users.views: Employee profile accessed by user: e_user
+2026-05-12 00:28:48,029 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:28:48,029 [INFO] users.views: Employee e_user statistics - Total orders: 1, Completed: 1
+2026-05-12 00:28:48,912 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:49,765 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:51,521 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:51,522 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:51,522 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:51,522 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:51,523 [INFO] users.views: Employee profile accessed by user: n_user
+2026-05-12 00:28:51,524 [WARNING] users.views: User n_user tried to access employee dashboard without employee profile
+2026-05-12 00:28:52,408 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:53,290 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:55,033 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:55,034 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:55,034 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:55,034 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:55,908 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:28:56,780 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:28:58,485 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:28:58,486 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:28:58,486 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:28:58,495 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:28:58,496 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:28:59,407 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:00,293 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:02,038 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:02,039 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:02,039 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:02,039 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:02,040 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:29:02,041 [INFO] users.views: Generating revenue report for Client ID: 1 from 2000-01-01 to 2030-01-01
+2026-05-12 00:29:02,042 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:29:02,925 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:03,786 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:05,515 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:05,516 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:05,516 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:05,516 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:05,517 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:29:05,518 [INFO] users.views: Generating client list for Employee ID: 1
+2026-05-12 00:29:30,222 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:30,922 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:32,295 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:32,296 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:32,296 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:32,297 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:32,298 [INFO] users.views: Contacts list page accessed
+2026-05-12 00:29:33,007 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:33,731 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:35,135 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:35,135 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:35,136 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:35,136 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:35,138 [INFO] users.views: Client profile accessed by user: c_user
+2026-05-12 00:29:35,138 [INFO] users.views: Client order filtering - Search: 'test', Sort: date
+2026-05-12 00:29:35,920 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:36,708 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:38,284 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:38,284 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:38,285 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:38,285 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:38,286 [INFO] users.views: Client profile accessed by user: n_user
+2026-05-12 00:29:38,286 [WARNING] users.views: User n_user tried to access client profile but has no profile object
+2026-05-12 00:29:39,036 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:39,898 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:41,678 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:41,679 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:41,679 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:41,679 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:41,680 [INFO] users.views: Employee profile accessed by user: e_user
+2026-05-12 00:29:41,682 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:29:41,682 [INFO] users.views: Employee e_user statistics - Total orders: 1, Completed: 1
+2026-05-12 00:29:42,627 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:43,526 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:45,322 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:45,323 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:45,323 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:45,324 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:45,325 [INFO] users.views: Employee profile accessed by user: n_user
+2026-05-12 00:29:45,326 [WARNING] users.views: User n_user tried to access employee dashboard without employee profile
+2026-05-12 00:29:46,224 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:47,087 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:48,812 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:48,813 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:48,813 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:48,814 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:49,710 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:50,566 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:52,339 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:52,339 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:52,340 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:52,340 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:52,341 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:29:53,307 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:54,264 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:56,186 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:56,187 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:56,187 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:56,187 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:56,188 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:29:56,189 [INFO] users.views: Generating revenue report for Client ID: 1 from 2000-01-01 to 2030-01-01
+2026-05-12 00:29:56,191 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:29:57,058 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:29:57,927 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:29:59,634 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:29:59,635 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:29:59,635 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:29:59,635 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:29:59,636 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:29:59,637 [INFO] users.views: Generating client list for Employee ID: 1
+2026-05-12 00:30:18,324 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,330 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,331 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:30:18,339 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:30:18,341 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:30:18,349 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:30:18,350 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,352 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:30:18,354 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:30:18,355 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:30:18,362 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:30:18,363 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,364 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:30:18,366 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:30:18,366 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:30:18,373 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:30:18,374 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,375 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:30:18,377 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:30:18,377 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:30:18,378 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:30:18,380 [INFO] cleaning.models: Total cost calculated for Order #1: 150.00 BYN (Promo: None)
+2026-05-12 00:30:18,388 [INFO] users.models: Client profile testclient created (Type: individual)
+2026-05-12 00:30:18,389 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,390 [INFO] cleaning.models: Service created: Kitchen Cleaning (Price: 50.0)
+2026-05-12 00:30:18,393 [INFO] content.models: PromoCode 'DISCOUNT10' (Discount: 10%) created. Archived: False
+2026-05-12 00:30:18,394 [INFO] cleaning.models: Order #1 created. Status: new, Client: testclient
+2026-05-12 00:30:18,394 [INFO] cleaning.models: Price frozen for OrderItem: Kitchen Cleaning at 50.0 BYN
+2026-05-12 00:30:18,396 [INFO] cleaning.models: Total cost calculated for Order #1: 90.00 BYN (Promo: DISCOUNT10)
+2026-05-12 00:30:18,404 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-12 00:30:18,405 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-12 00:30:18,406 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,407 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-12 00:30:18,408 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-12 00:30:18,409 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-12 00:30:18,410 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-12 00:30:18,411 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-12 00:30:18,412 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:30:18,413 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-12 00:30:18,414 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:30:18,416 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-12 00:30:18,418 [INFO] cleaning.models: Total cost calculated for Order #1: 60.00 BYN (Promo: None)
+2026-05-12 00:30:18,419 [INFO] cleaning.models: Total cost calculated for Order #2: 50.00 BYN (Promo: None)
+2026-05-12 00:30:18,422 [INFO] cleaning.services: Statistics calculated for 2 orders and 1 clients
+2026-05-12 00:30:18,427 [INFO] cleaning.services: Starting sales statistics calculation
+2026-05-12 00:30:18,428 [INFO] cleaning.services: Statistics calculated for 0 orders and 0 clients
+2026-05-12 00:30:18,435 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-12 00:30:18,436 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-12 00:30:18,436 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,437 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-12 00:30:18,438 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-12 00:30:18,439 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-12 00:30:18,440 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-12 00:30:18,441 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-12 00:30:18,441 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:30:18,442 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-12 00:30:18,443 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:30:18,444 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-12 00:30:18,449 [INFO] cleaning.services: Analysis complete. Popular: Standard Cleaning, Profitable: Standard Cleaning
+2026-05-12 00:30:18,454 [INFO] cleaning.services: Analyzing popular and profitable services
+2026-05-12 00:30:18,455 [INFO] cleaning.services: No sales data available for service analysis
+2026-05-12 00:30:18,461 [INFO] users.models: Client profile stat_user created (Type: individual)
+2026-05-12 00:30:18,462 [INFO] cleaning.models: ServiceType created: Standard Cleaning
+2026-05-12 00:30:18,462 [INFO] cleaning.models: ServiceType created: Deep Cleaning
+2026-05-12 00:30:18,463 [INFO] cleaning.models: Service created: Room Cleaning (Price: 20.0)
+2026-05-12 00:30:18,464 [INFO] cleaning.models: Service created: Oven Cleaning (Price: 50.0)
+2026-05-12 00:30:18,464 [INFO] cleaning.models: Order #1 created. Status: paid, Client: stat_user
+2026-05-12 00:30:18,465 [INFO] cleaning.models: Order #2 created. Status: paid, Client: stat_user
+2026-05-12 00:30:18,465 [INFO] cleaning.models: Order #3 created. Status: new, Client: stat_user
+2026-05-12 00:30:18,466 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:30:18,466 [INFO] cleaning.models: Price frozen for OrderItem: Oven Cleaning at 50.0 BYN
+2026-05-12 00:30:18,467 [INFO] cleaning.models: Price frozen for OrderItem: Room Cleaning at 20.0 BYN
+2026-05-12 00:30:18,468 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-12 00:30:18,665 [INFO] cleaning.services: Matplotlib chart successfully generated and encoded to base64
+2026-05-12 00:30:18,670 [INFO] cleaning.services: Generating profit distribution chart with Matplotlib
+2026-05-12 00:30:18,672 [WARNING] cleaning.services: Chart generation skipped: No sales data available
+2026-05-12 00:30:18,679 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-12 00:30:18,680 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-12 00:30:18,681 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,682 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-12 00:30:18,689 [INFO] cleaning.views: Initializing Home Dashboard view context
+2026-05-12 00:30:18,689 [INFO] cleaning.views: Searching clients with query: Ander
+2026-05-12 00:30:18,690 [INFO] cleaning.views: Sorting clients by: -user__last_name
+2026-05-12 00:30:18,690 [INFO] cleaning.views: Requesting external API data and statistics
+2026-05-12 00:30:18,691 [INFO] cleaning.views: Calculating system time and calendar data
+2026-05-12 00:30:18,691 [INFO] cleaning.views: Home Dashboard context preparation complete
+2026-05-12 00:30:18,700 [INFO] users.models: Client profile user1 created (Type: individual)
+2026-05-12 00:30:18,701 [INFO] users.models: Client profile user2 created (Type: individual)
+2026-05-12 00:30:18,703 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,704 [INFO] content.models: Vacancy 'Manager' posted. Active status: False
+2026-05-12 00:30:18,705 [INFO] cleaning.views: Fetching active vacancies from database
+2026-05-12 00:30:18,707 [INFO] cleaning.views: Found 1 active vacancies
+2026-05-12 00:30:18,719 [INFO] content.models: Company information created
+2026-05-12 00:30:18,725 [INFO] content.models: History milestone for year 2025 added
+2026-05-12 00:30:18,725 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,733 [INFO] content.models: News article 'Winter Discount' published
+2026-05-12 00:30:18,740 [INFO] content.models: FAQ item created: How to pay?
+2026-05-12 00:30:18,746 [INFO] content.models: Vacancy 'Driver' posted. Active status: True
+2026-05-12 00:30:18,756 [INFO] users.models: Client profile reviewer created (Type: individual)
+2026-05-12 00:30:18,758 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:30:18,766 [INFO] content.models: PromoCode 'CLEAN2026' (Discount: 15%) created. Archived: False
+2026-05-12 00:30:18,773 [INFO] content.models: PromoCode 'ACTIVE_1' (Discount: 10%) created. Archived: False
+2026-05-12 00:30:18,774 [INFO] content.models: PromoCode 'ACTIVE_2' (Discount: 20%) created. Archived: False
+2026-05-12 00:30:18,774 [INFO] content.models: PromoCode 'OLD_CODE' (Discount: 5%) created. Archived: True
+2026-05-12 00:30:18,774 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:30:18,776 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-05-12 00:30:18,784 [INFO] content.models: PromoCode 'MID' (Discount: 15%) created. Archived: False
+2026-05-12 00:30:18,784 [INFO] content.models: PromoCode 'LOW' (Discount: 5%) created. Archived: False
+2026-05-12 00:30:18,785 [INFO] content.models: PromoCode 'HIGH' (Discount: 30%) created. Archived: False
+2026-05-12 00:30:18,785 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:30:18,787 [INFO] content.services: Successfully categorized 3 active and 0 archived promo codes
+2026-05-12 00:30:18,794 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:30:18,795 [INFO] content.services: Successfully categorized 0 active and 0 archived promo codes
+2026-05-12 00:30:18,802 [INFO] content.models: PromoCode 'ARCH_1' (Discount: 10%) created. Archived: True
+2026-05-12 00:30:18,802 [INFO] content.services: Fetching and categorizing promo codes
+2026-05-12 00:30:18,804 [INFO] content.services: Successfully categorized 0 active and 1 archived promo codes
+2026-05-12 00:30:18,811 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:30:18,812 [INFO] content.models: Company information created
+2026-05-12 00:30:18,812 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,813 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:30:18,813 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,899 [INFO] content.views: Public home page accessed
+2026-05-12 00:30:18,942 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:30:18,942 [INFO] content.models: Company information created
+2026-05-12 00:30:18,943 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,943 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:30:18,944 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,946 [INFO] content.views: About company page accessed
+2026-05-12 00:30:18,957 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:30:18,957 [INFO] content.models: Company information created
+2026-05-12 00:30:18,958 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,958 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:30:18,959 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,961 [INFO] content.views: Fetching news list
+2026-05-12 00:30:18,969 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:30:18,970 [INFO] content.models: Company information created
+2026-05-12 00:30:18,970 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,970 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:30:18,971 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,973 [INFO] content.views: News article accessed: News 1
+2026-05-12 00:30:18,981 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:30:18,982 [INFO] content.models: Company information created
+2026-05-12 00:30:18,982 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,983 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:30:18,983 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,985 [INFO] content.views: Fetching FAQ list
+2026-05-12 00:30:18,994 [INFO] content.models: News article 'News 1' published
+2026-05-12 00:30:18,995 [INFO] content.models: Company information created
+2026-05-12 00:30:18,995 [INFO] content.models: History milestone for year 2020 added
+2026-05-12 00:30:18,995 [INFO] content.models: FAQ item created: Q?
+2026-05-12 00:30:18,996 [INFO] content.models: Vacancy 'Cleaner' posted. Active status: True
+2026-05-12 00:30:18,998 [INFO] content.views: Fetching active vacancies
+2026-05-12 00:30:19,683 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:30:20,352 [INFO] content.models: New review submitted by Client ID 1. Rating: 5/5
+2026-05-12 00:30:20,352 [INFO] content.views: New review submitted by client: client_user
+2026-05-12 00:30:20,358 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:20,359 [INFO] cleaning.models: Service created: Cheap (Price: 10)
+2026-05-12 00:30:20,359 [INFO] cleaning.models: Service created: Expensive (Price: 100)
+2026-05-12 00:30:20,360 [INFO] content.views: Catalog accessed with filters - min_price: 50, max_price: 150
+2026-05-12 00:30:21,147 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:30:22,108 [INFO] cleaning.models: ServiceType created: Type
+2026-05-12 00:30:22,109 [INFO] cleaning.models: Service created: Service (Price: 50)
+2026-05-12 00:30:22,115 [INFO] content.views: Service 'Service' added to cart by client_user
+2026-05-12 00:30:22,969 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:30:23,812 [INFO] content.views: Service ID 1 removed from cart by client_user
+2026-05-12 00:30:24,670 [INFO] users.models: Client profile client_user created (Type: individual)
+2026-05-12 00:30:25,514 [INFO] users.models: Employee profile staff_user created (ID: 1)
+2026-05-12 00:30:26,390 [INFO] cleaning.models: ServiceType created: Windows
+2026-05-12 00:30:26,390 [INFO] cleaning.models: Service created: Window Cleaning (Price: 80)
+2026-05-12 00:30:26,391 [INFO] users.models: Specialization 'WindowSpec' created (ID: 1)
+2026-05-12 00:30:26,398 [INFO] content.views: Processing checkout for client_user. Address: Minsk, Main Str 1, Action: pay_later
+2026-05-12 00:30:26,405 [INFO] content.views: Employee staff_user selected for order
+2026-05-12 00:30:26,407 [INFO] cleaning.models: Order #1 created. Status: new, Client: client_user
+2026-05-12 00:30:26,407 [INFO] cleaning.models: Price frozen for OrderItem: Window Cleaning at 80.00 BYN
+2026-05-12 00:30:26,408 [INFO] content.views: Order #1 successfully created for client client_user
+2026-05-12 00:30:26,424 [INFO] users.models: Specialization 'Plumber' created (ID: 1)
+2026-05-12 00:30:26,432 [INFO] users.models: Client profile testuser created (Type: individual)
+2026-05-12 00:30:26,440 [INFO] users.models: Client profile anon_user created (Type: individual)
+2026-05-12 00:30:26,452 [ERROR] users.models: Client validation error: Company name missing for legal entity (User: testuser)
+2026-05-12 00:30:26,458 [ERROR] users.models: Client validation error: Company name provided for individual (User: testuser)
+2026-05-12 00:30:26,465 [INFO] users.models: Specialization 'Cleaner' created (ID: 1)
+2026-05-12 00:30:26,466 [INFO] users.models: Employee profile testuser created (ID: 1)
+2026-05-12 00:30:26,479 [INFO] users.models: Client profile test_client_user created (Type: individual)
+2026-05-12 00:30:26,481 [INFO] cleaning.models: Order #1 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,482 [INFO] cleaning.models: Order #2 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,483 [INFO] cleaning.models: Order #3 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,484 [INFO] users.services: Fetching orders for client: test_client_user (Search: '', Sort: -date_created)
+2026-05-12 00:30:26,492 [INFO] users.models: Client profile test_client_user created (Type: individual)
+2026-05-12 00:30:26,492 [INFO] cleaning.models: Order #1 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,493 [INFO] cleaning.models: Order #2 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,494 [INFO] cleaning.models: Order #3 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,495 [INFO] users.services: Fetching orders for client: test_client_user (Search: 'Apple', Sort: -date_created)
+2026-05-12 00:30:26,505 [INFO] users.models: Client profile test_client_user created (Type: individual)
+2026-05-12 00:30:26,506 [INFO] cleaning.models: Order #1 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,507 [INFO] cleaning.models: Order #2 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,508 [INFO] cleaning.models: Order #3 created. Status: new, Client: test_client_user
+2026-05-12 00:30:26,510 [INFO] users.services: Fetching orders for client: test_client_user (Search: '', Sort: address)
+2026-05-12 00:30:26,521 [INFO] users.services: Calculating financial statistics for client
+2026-05-12 00:30:26,522 [INFO] users.services: Statistics calculated: Total Spent = 450.0
+2026-05-12 00:30:26,531 [INFO] users.services: Calculating financial statistics for client
+2026-05-12 00:30:26,532 [WARNING] users.services: No paid orders found for statistics calculation
+2026-05-12 00:30:26,539 [INFO] users.services: Calculating financial statistics for client
+2026-05-12 00:30:26,539 [INFO] users.services: Multiple modes or no mode found in order costs
+2026-05-12 00:30:26,539 [INFO] users.services: Statistics calculated: Total Spent = 300.0
+2026-05-12 00:30:26,545 [INFO] users.services: Generating datetime and calendar info for user: time_user
+2026-05-12 00:30:26,551 [INFO] users.services: Requesting weather data from Open-Meteo API
+2026-05-12 00:30:26,552 [INFO] users.services: Requesting random advice from AdviceSlip API
+2026-05-12 00:30:26,610 [INFO] users.services: Requesting weather data from Open-Meteo API
+2026-05-12 00:30:26,611 [ERROR] users.services: External Weather API call failed
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/users/services.py", line 76, in get_external_apis_data
+    w_res = requests.get(weather_url, timeout=3)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Down
+2026-05-12 00:30:26,612 [INFO] users.services: Requesting random advice from AdviceSlip API
+2026-05-12 00:30:26,613 [ERROR] users.services: External Advice API call failed
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/users/services.py", line 87, in get_external_apis_data
+    a_res = requests.get(advice_url, timeout=3)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/users/services.py", line 76, in get_external_apis_data
+    w_res = requests.get(weather_url, timeout=3)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Down
+2026-05-12 00:30:27,658 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:28,656 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:30,638 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:30,639 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:30,640 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:30,648 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:30,649 [INFO] users.views: Contacts list page accessed
+2026-05-12 00:30:31,658 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:32,656 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:34,643 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:34,643 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:34,644 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:34,644 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:34,647 [INFO] users.views: Client profile accessed by user: c_user
+2026-05-12 00:30:34,647 [INFO] users.views: Client order filtering - Search: 'test', Sort: date
+2026-05-12 00:30:35,694 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:36,821 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:38,899 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:38,899 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:38,900 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:38,900 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:38,902 [INFO] users.views: Client profile accessed by user: n_user
+2026-05-12 00:30:38,903 [WARNING] users.views: User n_user tried to access client profile but has no profile object
+2026-05-12 00:30:39,972 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:41,058 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:43,164 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:43,165 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:43,166 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:43,166 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:43,167 [INFO] users.views: Employee profile accessed by user: e_user
+2026-05-12 00:30:43,169 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:30:43,170 [INFO] users.views: Employee e_user statistics - Total orders: 1, Completed: 1
+2026-05-12 00:30:44,215 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:45,260 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:47,445 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:47,446 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:47,447 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:47,447 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:47,448 [INFO] users.views: Employee profile accessed by user: n_user
+2026-05-12 00:30:47,449 [WARNING] users.views: User n_user tried to access employee dashboard without employee profile
+2026-05-12 00:30:48,366 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:49,409 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:51,463 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:51,463 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:51,464 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:51,465 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:52,422 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:53,413 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:55,393 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:55,393 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:55,394 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:55,394 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:55,396 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:30:56,339 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:30:57,324 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:30:59,310 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:30:59,311 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:30:59,312 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:30:59,312 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:30:59,313 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:30:59,314 [INFO] users.views: Generating revenue report for Client ID: 1 from 2000-01-01 to 2030-01-01
+2026-05-12 00:30:59,317 [INFO] cleaning.models: Total cost calculated for Order #1: 100.00 BYN (Promo: None)
+2026-05-12 00:31:00,151 [INFO] users.models: Client profile c_user created (Type: individual)
+2026-05-12 00:31:00,971 [INFO] users.models: Employee profile e_user created (ID: 1)
+2026-05-12 00:31:02,610 [INFO] cleaning.models: ServiceType created: Cleaning
+2026-05-12 00:31:02,611 [INFO] cleaning.models: Service created: Room (Price: 50)
+2026-05-12 00:31:02,611 [INFO] cleaning.models: Order #1 created. Status: paid, Client: c_user
+2026-05-12 00:31:02,612 [INFO] cleaning.models: Price frozen for OrderItem: Room at 50 BYN
+2026-05-12 00:31:02,613 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-05-12 00:31:02,614 [INFO] users.views: Generating client list for Employee ID: 1
+2026-05-12 00:31:02,622 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-12 00:31:02,622 [INFO] cleaning.services: Weather data retrieved successfully: 22.5°C
+2026-05-12 00:31:02,627 [INFO] cleaning.services: Fetching weather data for Minsk
+2026-05-12 00:31:02,627 [ERROR] cleaning.services: Failed to retrieve weather data
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 20, in get_weather_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: Connection Timeout
+2026-05-12 00:31:02,633 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-12 00:31:02,634 [INFO] cleaning.services: Exchange rate retrieved: 0.31
+2026-05-12 00:31:02,638 [INFO] cleaning.services: Fetching BYN to USD exchange rate
+2026-05-12 00:31:02,638 [ERROR] cleaning.services: Failed to retrieve exchange rate
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/cleaning/services.py", line 35, in get_exchange_rate_api
+    response = requests.get(url, timeout=5)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1134, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1138, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1193, in _execute_mock_call
+    raise effect
+Exception: API Unavailable
+2026-05-12 00:31:02,650 [WARNING] users.models: Validation failed: User age is 14, which is under 18.
+2026-05-12 00:42:49,079 [INFO] matplotlib.font_manager: generated new fontManager
+2026-05-12 00:42:51,565 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-05-12 00:43:11,318 [INFO] content.views: Reviews page accessed
