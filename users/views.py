@@ -35,7 +35,7 @@ class RegisterView(CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        logger.info(f"New client registered: {self.object.user.username}")
+        logger.info(f"New client registered: {self.object.username}")
         return response
 
 
