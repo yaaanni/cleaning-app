@@ -4,4 +4,6 @@ requests==2.31.0
 matplotlib==3.8.4
 pytest-django==4.8.0
 pytest-cov==5.0.0
-whitenoise
+whitenoise==6.6.0
+gunicorn==22.0.0
+dj-database-url==2.1.0
