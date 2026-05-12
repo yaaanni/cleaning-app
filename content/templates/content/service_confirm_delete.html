@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="max-width: 500px; margin: 60px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #fecaca; text-align: center; font-family: sans-serif;">
+    <h1 style="color: #ef4444; margin-top: 0;">Are you sure?</h1>
+    <p style="font-size: 1.1em; color: #475569;">You are about to permanently delete the service: <br>
+        <strong style="color: #1e293b; font-size: 1.2em;">"{{ object.name }}"</strong>
+    </p>
+
+    <form method="post" style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+        {% csrf_token %}
+        <button type="submit" style="background: #ef4444; color: white; border: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; cursor: pointer;">Yes, Delete it</button>
+        <a href="{% url 'content:service_manage_list' %}" style="background: #f1f5f9; color: #475569; text-decoration: none; padding: 12px 25px; border-radius: 6px; font-weight: bold;">Cancel</a>
+    </form>
+</div>
+{% endblock %}

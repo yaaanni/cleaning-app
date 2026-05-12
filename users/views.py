@@ -121,8 +121,6 @@ class SuperuserDashboardView(UserPassesTestMixin, TemplateView):
         logger.info(f"Superuser dashboard accessed by: {self.request.user.username}")
         context = super().get_context_data(**kwargs)
 
-        context['services'] = Service.objects.all()
-
         context['planned_orders'] = Order.objects.filter(
             date_execution__gte=timezone.now(),
             status__in=[Order.Status.NEW, Order.Status.PAID]

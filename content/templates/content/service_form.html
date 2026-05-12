@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="max-width: 600px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; font-family: sans-serif;">
+    <h1 style="color: #4361ee; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">
+        {% if object %}Edit Service: {{ object.name }}{% else %}Add New Service{% endif %}
+    </h1>
+
+    <form method="post" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+        {% csrf_token %}
+        {{ form.as_p }} <div style="display: flex; gap: 15px; margin-top: 10px;">
+            <button type="submit" style="background: #4361ee; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; flex-grow: 1;">Save Service</button>
+            <a href="{% url 'content:service_manage_list' %}" style="background: #f1f5f9; color: #475569; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; text-align: center;">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

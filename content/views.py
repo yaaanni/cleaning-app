@@ -1,8 +1,9 @@
 import logging
 import json
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.shortcuts import redirect, get_object_or_404, render
 from django.contrib import messages
 from django.db.models import Sum, Prefetch, Count, Q
@@ -283,3 +284,55 @@ class RemoveFromCartView(LoginRequiredMixin, View):
             messages.success(request, "Item removed from cart.")
 
         return redirect('content:cart')
+
+class ServiceManageListView(UserPassesTestMixin, ListView):
+    model = Service
+    template_name = 'content/service_manage_list.html'
+    context_object_name = 'services'
+
+    def test_func(self):
+        return self.request.user.is_superuser
+
+class ServiceCreateView(UserPassesTestMixin, CreateView):
+    model = Service
+    fields = ['service_type', 'name', 'price', 'note']
+    template_name = 'content/service_form.html'
+    success_url = reverse_lazy('users:superuser_dashboard')
+
+    def test_func(self):
+        return self.request.user.is_superuser
+
+    def form_valid(self, form):
+        logger.info(f"Superuser {self.request.user.username} created a new service: {form.instance.name}")
+        messages.success(self.request, f"Service '{form.instance.name}' added successfully!")
+        return super().form_valid(form)
+
+
+class ServiceUpdateView(UserPassesTestMixin, UpdateView):
+    model = Service
+    fields = ['service_type', 'name', 'price', 'note']
+    template_name = 'content/service_form.html'
+    success_url = reverse_lazy('users:superuser_dashboard')
+
+    def test_func(self):
+        return self.request.user.is_superuser
+
+    def form_valid(self, form):
+        logger.info(f"Superuser {self.request.user.username} updated service: {form.instance.name}")
+        messages.success(self.request, f"Service '{form.instance.name}' updated successfully!")
+        return super().form_valid(form)
+
+
+class ServiceDeleteView(UserPassesTestMixin, DeleteView):
+    model = Service
+    template_name = 'cleaning/service_confirm_delete.html'
+    success_url = reverse_lazy('users:superuser_dashboard')
+
+    def test_func(self):
+        return self.request.user.is_superuser
+
+    def delete(self, request, *args, **kwargs):
+        obj = self.get_object()
+        logger.info(f"Superuser {request.user.username} deleted service: {obj.name}")
+        messages.success(self.request, f"Service '{obj.name}' deleted.")
+        return super().delete(request, *args, **kwargs)

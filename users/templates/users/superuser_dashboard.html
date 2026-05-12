@@ -161,26 +161,12 @@
     </div>
 
     <div class="card">
-        <h2>4. Current Active Services Catalog</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Service Name</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for service in services %}
-                <tr>
-                    <td>{{ service.service_type.name }}</td>
-                    <td>{{ service.name }}</td>
-                    <td>{{ service.price }} BYN</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+    <h2>4. Service Management</h2>
+    <p>Manage your catalog here: add new services, update existing ones, or remove them as needed.</p>
+    <a href="{% url 'cleaning:service_manage_list' %}" class="btn-submit" style="text-decoration: none; display: inline-block;">
+        Go to Service Management
+    </a>
+</div>
 
 </div>
 
