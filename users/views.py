@@ -1,7 +1,6 @@
 import logging
 from django.views.generic import ListView, CreateView, TemplateView
 from django.contrib.auth.mixins import UserPassesTestMixin
-from cleaning.models import Service
 from django.utils import timezone
 from .models import Employee, Client
 from cleaning.models import Order
