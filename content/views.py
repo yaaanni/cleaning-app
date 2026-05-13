@@ -285,6 +285,26 @@ class RemoveFromCartView(LoginRequiredMixin, View):
 
         return redirect('content:cart')
 
+class PayOrderView(LoginRequiredMixin, View):
+    def post(self, request, order_id, *args, **kwargs):
+        if not hasattr(request.user, 'client_profile'):
+            logger.warning(f"Unauthorized payment attempt by {request.user.username}")
+            messages.error(request, "Only clients can pay for orders.")
+            return redirect('content:catalog')
+
+        order = get_object_or_404(Order, id=order_id, client=request.user.client_profile)
+
+        if order.status == Order.Status.NEW:
+            order.status = Order.Status.PAID
+            order.save()
+            logger.info(f"Order #{order.id} was successfully paid by {request.user.username}")
+            messages.success(request, f"Order #{order.id} has been successfully paid!")
+        else:
+            logger.warning(f"Attempt to pay order #{order.id} with status {order.status}")
+            messages.error(request, "This order cannot be paid or is already paid.")
+
+        return redirect('content:cart')
+
 class ServiceManageListView(UserPassesTestMixin, ListView):
     model = Service
     template_name = 'content/service_manage_list.html'

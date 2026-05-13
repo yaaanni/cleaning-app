@@ -3,7 +3,8 @@ from django.contrib.auth.views import LogoutView
 from .views import (PublicHomeView, AboutCompanyView, NewsListView, NewsDetailView, FAQListView, PrivacyPolicyView,
                     VacancyListView, ReviewListView, PromoCodeListView,
                     CatalogListView, AddToCartView, CartView, RemoveFromCartView, ServiceManageListView,
-                    ServiceCreateView, ServiceUpdateView, ServiceDeleteView)
+                    ServiceCreateView, ServiceUpdateView, ServiceDeleteView,
+                    PayOrderView)
 
 app_name = 'content'
 
@@ -26,4 +27,5 @@ urlpatterns = [
     re_path(r'^manage/services/add/$', ServiceCreateView.as_view(), name='service_create'),
     re_path(r'^manage/services/(?P<pk>\d+)/edit/$', ServiceUpdateView.as_view(), name='service_update'),
     re_path(r'^manage/services/(?P<pk>\d+)/delete/$', ServiceDeleteView.as_view(), name='service_delete'),
+    re_path(r'^order/(?P<order_id>\d+)/pay/$', PayOrderView.as_view(), name='pay_order'),
 ]

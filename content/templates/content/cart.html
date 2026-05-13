@@ -181,6 +181,7 @@
                         <th style="background: white;">Execution Date</th>
                         <th style="background: white;">Total</th>
                         <th style="background: white;">Status</th>
+                        <th style="background: white; text-align: center;">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -192,6 +193,14 @@
                         <td>{{ order.date_execution|date:"d M Y, H:i" }}</td>
                         <td style="font-weight: bold; color: #10b981;">{{ order.get_total_cost }} BYN</td>
                         <td><span class="status-badge">{{ order.get_status_display }}</span></td>
+                        <td style="text-align: center;">
+                            <form method="post" action="{% url 'content:pay_order' order.id %}" style="margin: 0;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn-submit btn-pay" style="padding: 8px 15px; font-size: 0.9em; width: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                    Pay Now
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
