@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Client
+from .models import validate_age
 
 
 class ClientRegistrationForm(UserCreationForm):
@@ -9,7 +10,8 @@ class ClientRegistrationForm(UserCreationForm):
     last_name = forms.CharField(max_length=30, required=True, label="Фамилия")
     patronymic = forms.CharField(max_length=100, required=False, label="Отчество")
     phone = forms.CharField(max_length=20, required=True, label="Телефон (формат: +375 (29) XXX-XX-XX)")
-    birth_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}), required=True, label="Дата рождения")
+    birth_date = forms.DateField(validators=[validate_age], widget=forms.DateInput(attrs={'type': 'date'}),
+                                 required=True, label="Дата рождения")
     client_type = forms.ChoiceField(choices=Client.ClientType.choices, label="Тип клиента")
     company_name = forms.CharField(max_length=150, required=False, label="Название компании (для юр. лиц)")
 
