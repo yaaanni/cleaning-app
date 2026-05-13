@@ -1,6 +1,7 @@
 import logging
 import json
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db.models.functions import Coalesce
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -141,10 +142,15 @@ class CatalogListView(ListView):
         user = self.request.user
         context['is_client'] = user.is_authenticated and hasattr(user, 'client_profile')
 
-        popular = Service.objects.annotate(total_sold=Sum('orderitem__quantity')).order_by('-total_sold').first()
+        services_with_sales = Service.objects.annotate(
+            total_sold=Coalesce(Sum('orderitem__quantity'), 0)
+        )
+
+        popular = services_with_sales.filter(total_sold__gt=0).order_by('-total_sold').first()
         context['popular_service'] = popular
 
-        top_services = Service.objects.annotate(total_sold=Sum('orderitem__quantity')).exclude(total_sold=None).order_by('-total_sold')[:5]
+        top_services = services_with_sales.filter(total_sold__gt=0).order_by('-total_sold')[:5]
+
         context['chart_labels'] = json.dumps([s.name for s in top_services])
         context['chart_values'] = json.dumps([s.total_sold for s in top_services])
 
