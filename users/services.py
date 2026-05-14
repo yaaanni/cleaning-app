@@ -93,3 +93,4 @@ def get_external_apis_data():
         api_data['advice'] = "Keep your home clean and your mind clear!"
 
     return api_data
+

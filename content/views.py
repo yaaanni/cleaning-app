@@ -1,5 +1,4 @@
 import logging
-import json
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models.functions import Coalesce
 from django.urls import reverse_lazy
@@ -14,7 +13,7 @@ from content.models import Vacancy, PromoCode
 from cleaning.models import ServiceType, Service, Order, OrderItem
 from users.models import Employee
 from .forms import ReviewForm
-from .services import get_categorized_promo_codes
+from .services import get_categorized_promo_codes, get_matplotlib_chart
 
 logger = logging.getLogger(__name__)
 
@@ -151,8 +150,13 @@ class CatalogListView(ListView):
 
         top_services = services_with_sales.filter(total_sold__gt=0).order_by('-total_sold')[:5]
 
-        context['chart_labels'] = json.dumps([s.name for s in top_services])
-        context['chart_values'] = json.dumps([s.total_sold for s in top_services])
+        labels = [s.name for s in top_services]
+        values = [s.total_sold for s in top_services]
+
+        if labels and values:
+            context['chart_image'] = get_matplotlib_chart(labels, values)
+        else:
+            context['chart_image'] = None
 
         return context
 

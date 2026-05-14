@@ -124,9 +124,13 @@
         {% endif %}
     </div>
 
-    <div class="chart-container">
-        <h3 style="text-align: center; margin-top: 0;">Top 5 Selling Services</h3>
-        <canvas id="salesChart"></canvas>
+    <div class="chart-container" style="text-align: center;">
+    <h3 style="margin-top: 0;">Top 5 Selling Services</h3>
+    {% if chart_image %}
+        <img src="{{ chart_image }}" alt="Sales Chart" style="max-width: 100%; height: auto; border-radius: 8px;">
+    {% else %}
+        <p style="color: #94a3b8;">Not enough data for chart yet.</p>
+    {% endif %}
     </div>
 
     {% for category in categories %}
@@ -168,39 +172,6 @@
 <footer>
     <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    const ctx = document.getElementById('salesChart');
-    const labels = {{ chart_labels|safe }};
-    const data = {{ chart_values|safe }};
-
-    if (labels.length > 0) {
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Total Units Sold',
-                    data: data,
-                    backgroundColor: '#4361ee',
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: { stepSize: 1 }
-                    }
-                }
-            }
-        });
-    } else {
-        ctx.style.display = 'none';
-        ctx.insertAdjacentHTML('afterend', '<p style="text-align: center; color: #94a3b8;">Not enough data for chart yet.</p>');
-    }
-</script>
 
 </body>
 </html>

@@ -17,3 +17,27 @@ def get_categorized_promo_codes():
         'active_promos': active_promos,
         'archived_promos': archived_promos
     }
+
+import matplotlib.pyplot as plt
+import io
+import base64
+
+
+def get_matplotlib_chart(labels, values):
+    import matplotlib
+    matplotlib.use('Agg')
+
+    plt.figure(figsize=(6, 4))
+    plt.bar(labels, values, color='#4361ee')
+    plt.title('Top 5 Selling Services')
+    plt.ylabel('Units Sold')
+
+    buffer = io.BytesIO()
+    plt.savefig(buffer, format='png')
+    buffer.seek(0)
+
+    image_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
+    buffer.close()
+    plt.close()
+
+    return f"data:image/png;base64,{image_base64}"
