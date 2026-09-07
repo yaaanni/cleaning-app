@@ -110,3 +110,11 @@ class PromoCode(models.Model):
 
     def __str__(self):
         return self.code
+
+class Partner(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Company name")
+    logo = models.ImageField(upload_to='partners/', verbose_name="Logo")
+    website = models.URLField(verbose_name="Company website")
+
+    def __str__(self):
+        return self.name

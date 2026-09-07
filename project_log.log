@@ -1613,3 +1613,1291 @@ Exception: API Unavailable
 2026-05-12 01:00:06,909 [INFO] django.utils.autoreload: /app/CleaningApp/settings.py changed, reloading.
 2026-05-12 01:00:07,954 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
 2026-05-12 01:18:25,573 [INFO] django.utils.autoreload: /app/CleaningApp/settings.py changed, reloading.
+2026-05-14 09:21:01,468 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-05-14 09:21:13,751 [INFO] content.views: Public home page accessed
+2026-05-14 09:21:13,959 [WARNING] django.request: Not Found: /favicon.ico
+2026-05-14 09:22:18,299 [INFO] content.views: Public home page accessed
+2026-05-14 09:22:35,429 [INFO] content.views: Public home page accessed
+2026-05-14 09:22:37,845 [INFO] content.views: About company page accessed
+2026-05-14 09:22:38,008 [ERROR] django.request: Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 964, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1150, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 976, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 69, in url
+    return self.storage.url(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 81, in url
+    return self._get_url(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 78, in _get_url
+    return cloudinary_resource.url
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 310, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 320, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 317, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 893, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 802, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+2026-05-14 09:22:49,027 [INFO] content.views: About company page accessed
+2026-05-14 09:22:49,166 [ERROR] django.request: Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 964, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1150, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 976, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 69, in url
+    return self.storage.url(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 81, in url
+    return self._get_url(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 78, in _get_url
+    return cloudinary_resource.url
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 310, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 320, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 317, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 893, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 802, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+2026-05-14 09:38:52,802 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-05-14 09:39:00,569 [WARNING] django.request: Not Found: /favicon.ico
+2026-05-14 09:39:02,169 [INFO] content.views: Public home page accessed
+2026-05-14 09:39:02,297 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 125, in get_parent
+    raise TemplateSyntaxError(error_msg)
+django.template.exceptions.TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.html' variable.
+2026-05-14 09:40:39,921 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-05-14 09:40:43,535 [INFO] content.views: Public home page accessed
+2026-05-14 09:40:43,651 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 125, in get_parent
+    raise TemplateSyntaxError(error_msg)
+django.template.exceptions.TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.html' variable.
+2026-05-14 09:40:45,773 [INFO] content.views: Public home page accessed
+2026-05-14 09:40:45,819 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 125, in get_parent
+    raise TemplateSyntaxError(error_msg)
+django.template.exceptions.TemplateSyntaxError: Invalid template name in 'extends' tag: ''. Got this from the 'base.html' variable.
+2026-05-14 09:41:47,045 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-05-14 09:41:49,520 [INFO] content.views: Public home page accessed
+2026-05-14 09:41:49,648 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:43:59,260 [INFO] content.views: Public home page accessed
+2026-05-14 09:43:59,396 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:44:39,661 [INFO] content.views: Public home page accessed
+2026-05-14 09:44:39,786 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:44:41,245 [INFO] content.views: Public home page accessed
+2026-05-14 09:44:41,357 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:44:42,175 [INFO] content.views: Public home page accessed
+2026-05-14 09:44:42,286 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:44:42,677 [INFO] content.views: Public home page accessed
+2026-05-14 09:44:42,794 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:46:15,118 [INFO] content.views: Public home page accessed
+2026-05-14 09:46:15,233 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:47:45,954 [INFO] content.views: Public home page accessed
+2026-05-14 09:47:46,004 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+2026-05-14 09:50:27,317 [INFO] content.views: Public home page accessed
+2026-05-14 09:51:39,692 [INFO] content.views: Public home page accessed
+2026-09-04 15:54:19,352 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-04 15:54:44,965 [INFO] content.views: Public home page accessed
+2026-09-04 15:54:45,044 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-04 15:54:53,689 [INFO] content.views: About company page accessed
+2026-09-04 15:54:53,766 [ERROR] django.request: Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 964, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1150, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 976, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 69, in url
+    return self.storage.url(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 81, in url
+    return self._get_url(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 78, in _get_url
+    return cloudinary_resource.url
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 310, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 320, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 317, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 893, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 802, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+2026-09-04 15:55:38,598 [INFO] content.views: Fetching news list
+2026-09-04 15:55:38,649 [ERROR] django.request: Internal Server Error: /news/
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 964, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 249, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1150, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 976, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 69, in url
+    return self.storage.url(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 81, in url
+    return self._get_url(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 78, in _get_url
+    return cloudinary_resource.url
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 310, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 320, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 317, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 893, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 802, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+2026-09-04 15:55:41,221 [INFO] users.views: Contacts list page accessed
+2026-09-04 15:55:41,282 [ERROR] django.request: Internal Server Error: /users/contacts/
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 964, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 249, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1150, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 976, in _resolve_lookup
+    current = getattr(current, bit)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/db/models/fields/files.py", line 69, in url
+    return self.storage.url(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 81, in url
+    return self._get_url(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary_storage/storage.py", line 78, in _get_url
+    return cloudinary_resource.url
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 310, in url
+    return self.build_url(**self.url_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 320, in build_url
+    return self.__build_url(**options)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/__init__.py", line 317, in __build_url
+    return utils.cloudinary_url(public_id, **combined_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 893, in cloudinary_url
+    prefix = build_distribution_domain(options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/cloudinary/utils.py", line 802, in build_distribution_domain
+    raise ValueError("Must supply cloud_name in tag or in configuration")
+ValueError: Must supply cloud_name in tag or in configuration
+2026-09-04 16:01:19,461 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/CleaningApp/settings.py changed, reloading.
+2026-09-04 16:01:20,174 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-04 16:05:58,459 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/CleaningApp/urls.py changed, reloading.
+2026-09-04 16:05:58,959 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-04 16:08:17,243 [INFO] content.views: Public home page accessed
+2026-09-04 16:08:22,678 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-04 16:08:25,527 [INFO] content.views: Public home page accessed
+2026-09-04 16:08:26,844 [INFO] content.views: Public home page accessed
+2026-09-04 16:08:27,560 [INFO] content.views: Public home page accessed
+2026-09-04 16:20:43,810 [INFO] content.views: Public home page accessed
+2026-09-04 16:38:55,090 [INFO] content.views: Public home page accessed
+2026-09-04 16:39:33,614 [INFO] content.views: Public home page accessed
+2026-09-04 16:39:33,662 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 579, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 644, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Template: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/templates/content/base.html, Invalid block tag on line 6: 'static'. Did you forget to register or load this tag?
+2026-09-04 16:40:41,634 [INFO] content.views: Public home page accessed
+2026-09-04 16:40:41,674 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 135, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 132, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 110, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 157, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 199, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 585, in parse
+    raise self.error(token, e)
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/base.py", line 583, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 229, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Template: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/templates/content/base.html, 'block' tag with name 'content' appears more than once
+2026-09-04 16:41:36,855 [INFO] content.views: Public home page accessed
+2026-09-04 16:42:30,099 [INFO] content.views: Public home page accessed
+2026-09-04 16:42:31,004 [INFO] content.views: Public home page accessed
+2026-09-06 20:18:50,525 [INFO] content.views: Public home page accessed
+2026-09-06 20:18:54,317 [INFO] content.views: Fetching FAQ list
+2026-09-06 20:18:58,299 [INFO] users.views: Contacts list page accessed
+2026-09-06 20:18:59,549 [INFO] content.views: Reviews page accessed
+2026-09-06 20:19:00,756 [INFO] content.views: Promo codes list accessed
+2026-09-06 20:19:00,756 [INFO] content.services: Fetching and categorizing promo codes
+2026-09-06 20:19:00,766 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-09-06 20:19:01,765 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 20:19:03,049 [INFO] content.views: Fetching news list
+2026-09-06 20:19:04,237 [INFO] content.views: About company page accessed
+2026-09-06 20:19:09,650 [INFO] content.views: Public home page accessed
+2026-09-06 20:19:15,901 [INFO] content.views: About company page accessed
+2026-09-06 20:19:20,178 [INFO] content.views: Public home page accessed
+2026-09-06 20:21:43,619 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 20:23:01,361 [INFO] users.models: Client profile yaaanni created (Type: individual)
+2026-09-06 20:23:01,361 [INFO] users.views: New client registered: yaaanni
+2026-09-06 20:23:01,365 [INFO] content.views: Public home page accessed
+2026-09-06 20:23:17,534 [INFO] content.views: Public home page accessed
+2026-09-06 20:23:20,879 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 20:23:22,966 [INFO] content.views: Service 'Deep Home Sanitization' added to cart by yaaanni
+2026-09-06 20:23:22,979 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 20:23:26,820 [INFO] content.views: Public home page accessed
+2026-09-06 20:24:04,566 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 20:24:25,300 [INFO] content.views: Client yaaanni accessing cart
+2026-09-06 20:25:32,432 [INFO] content.views: Public home page accessed
+2026-09-06 20:25:35,950 [INFO] content.views: News article accessed: Crystal Clear Services Wins "Green Business of the Year"
+2026-09-06 20:25:38,719 [INFO] content.views: Fetching news list
+2026-09-06 20:25:41,551 [INFO] content.views: Public home page accessed
+2026-09-06 20:27:39,713 [INFO] content.views: About company page accessed
+2026-09-06 20:44:57,278 [INFO] content.views: Public home page accessed
+2026-09-06 20:46:47,845 [INFO] content.views: Public home page accessed
+2026-09-06 20:46:49,656 [INFO] content.views: Public home page accessed
+2026-09-06 20:49:05,243 [INFO] content.views: Public home page accessed
+2026-09-06 20:49:06,767 [INFO] content.views: Public home page accessed
+2026-09-06 20:49:08,480 [INFO] users.views: Client profile accessed by user: yaaanni
+2026-09-06 20:49:08,484 [INFO] users.views: Client order filtering - Search: '', Sort: -date_created
+2026-09-06 20:49:08,484 [INFO] users.services: Fetching orders for client: yaaanni (Search: '', Sort: -date_created)
+2026-09-06 20:49:08,485 [INFO] users.services: Calculating financial statistics for client
+2026-09-06 20:49:08,487 [WARNING] users.services: No paid orders found for statistics calculation
+2026-09-06 20:49:08,488 [INFO] users.services: Generating datetime and calendar info for user: yaaanni
+2026-09-06 20:49:08,491 [INFO] users.services: Requesting weather data from Open-Meteo API
+2026-09-06 20:49:08,702 [INFO] users.services: Requesting random advice from AdviceSlip API
+2026-09-06 20:50:39,551 [INFO] content.views: Public home page accessed
+2026-09-06 20:50:39,592 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 20:50:40,243 [INFO] content.views: Public home page accessed
+2026-09-06 20:50:40,286 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 20:50:40,490 [INFO] content.views: Public home page accessed
+2026-09-06 20:50:40,547 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 20:50:56,198 [INFO] users.views: Contacts list page accessed
+2026-09-06 20:50:57,482 [INFO] content.views: Public home page accessed
+2026-09-06 20:52:05,697 [INFO] content.views: Public home page accessed
+2026-09-06 20:52:08,131 [INFO] content.views: Public home page accessed
+2026-09-06 20:52:20,850 [INFO] content.views: Fetching FAQ list
+2026-09-06 21:06:09,287 [INFO] content.views: Public home page accessed
+2026-09-06 21:06:09,332 [WARNING] django.request: Not Found: /{% static 'images/free-icon-cleaning-services'}
+2026-09-06 21:08:06,893 [INFO] content.views: Public home page accessed
+2026-09-06 21:08:06,940 [WARNING] django.request: Not Found: /{% static 'images/free-icon-cleaning-services.png'}
+2026-09-06 21:10:54,868 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/CleaningApp/settings.py changed, reloading.
+2026-09-06 21:10:55,746 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 21:10:57,817 [INFO] content.views: Public home page accessed
+2026-09-06 21:13:08,221 [INFO] content.views: Public home page accessed
+2026-09-06 21:14:18,916 [INFO] users.views: Contacts list page accessed
+2026-09-06 21:14:21,844 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 21:17:36,213 [INFO] content.views: Public home page accessed
+2026-09-06 21:17:38,035 [INFO] content.views: About company page accessed
+2026-09-06 21:17:39,596 [INFO] content.views: Public home page accessed
+2026-09-06 22:21:32,659 [INFO] content.views: Public home page accessed
+2026-09-06 22:23:18,025 [INFO] content.views: Public home page accessed
+2026-09-06 22:25:26,706 [INFO] content.views: Public home page accessed
+2026-09-06 22:25:30,311 [INFO] content.views: Public home page accessed
+2026-09-06 22:25:52,622 [INFO] content.views: Public home page accessed
+2026-09-06 22:25:53,673 [INFO] content.views: Public home page accessed
+2026-09-06 22:26:29,610 [INFO] content.views: Public home page accessed
+2026-09-06 22:26:32,786 [INFO] content.views: Public home page accessed
+2026-09-06 22:26:36,589 [INFO] content.views: Public home page accessed
+2026-09-06 22:26:46,900 [INFO] content.views: Public home page accessed
+2026-09-06 22:27:13,868 [INFO] content.views: Public home page accessed
+2026-09-06 22:27:15,236 [INFO] content.views: Public home page accessed
+2026-09-06 22:28:48,266 [INFO] content.views: Public home page accessed
+2026-09-06 22:28:53,945 [INFO] content.views: Public home page accessed
+2026-09-06 22:29:14,106 [INFO] content.views: Public home page accessed
+2026-09-06 22:29:16,403 [INFO] content.views: Promo codes list accessed
+2026-09-06 22:29:16,404 [INFO] content.services: Fetching and categorizing promo codes
+2026-09-06 22:29:16,412 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-09-06 22:29:16,457 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 22:29:18,331 [INFO] content.views: Public home page accessed
+2026-09-06 22:29:24,162 [INFO] content.views: Public home page accessed
+2026-09-06 22:41:50,375 [INFO] content.views: Public home page accessed
+2026-09-06 22:42:49,171 [INFO] content.views: Public home page accessed
+2026-09-06 22:42:51,222 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 22:44:23,760 [INFO] content.views: Public home page accessed
+2026-09-06 22:51:11,113 [INFO] content.views: Public home page accessed
+2026-09-06 22:51:12,365 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 22:56:20,430 [INFO] content.views: Public home page accessed
+2026-09-06 22:56:21,727 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 22:59:35,948 [INFO] content.views: Public home page accessed
+2026-09-06 23:02:30,538 [INFO] content.views: About company page accessed
+2026-09-06 23:02:33,517 [INFO] content.views: Public home page accessed
+2026-09-06 23:11:06,501 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/models.py changed, reloading.
+2026-09-06 23:11:07,146 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:11:26,273 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/admin.py changed, reloading.
+2026-09-06 23:11:26,702 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:17:23,919 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:19:34,886 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:28:18,066 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:29:44,923 [WARNING] django.request: Not Found: /admin/content/banner/add/
+2026-09-06 23:38:22,884 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/views.py changed, reloading.
+2026-09-06 23:38:23,331 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:38:55,806 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/views.py changed, reloading.
+2026-09-06 23:38:56,183 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:39:02,357 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/views.py changed, reloading.
+2026-09-06 23:39:02,731 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:39:18,225 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:39:31,407 [INFO] django.utils.autoreload: /home/yana/453501_POPOVA_21/IGI/LR5/Cleaning/CleaningApp/content/views.py changed, reloading.
+2026-09-06 23:39:31,846 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2026-09-06 23:39:38,800 [INFO] content.views: Public home page accessed
+2026-09-06 23:39:40,538 [INFO] content.views: Public home page accessed
+2026-09-06 23:42:28,664 [INFO] content.views: News article accessed: Crystal Clear Services Wins "Green Business of the Year"
+2026-09-06 23:42:28,735 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-06 23:42:31,490 [INFO] content.views: Fetching news list
+2026-09-06 23:42:35,067 [INFO] content.views: Public home page accessed
+2026-09-06 23:45:53,495 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 23:46:08,899 [INFO] users.views: Superuser dashboard accessed by: admin
+2026-09-06 23:46:11,573 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 23:46:15,333 [INFO] content.views: Public home page accessed
+2026-09-06 23:47:36,974 [INFO] content.views: Fetching news list
+2026-09-06 23:47:38,684 [INFO] content.views: News article accessed: Crystal Clear Services Wins "Green Business of the Year"
+2026-09-06 23:47:56,032 [INFO] content.views: About company page accessed
+2026-09-06 23:54:03,010 [INFO] content.views: About company page accessed
+2026-09-06 23:54:04,667 [INFO] content.views: Public home page accessed
+2026-09-06 23:54:52,758 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 23:56:31,454 [INFO] content.views: Public home page accessed
+2026-09-06 23:58:27,833 [INFO] content.views: Public home page accessed
+2026-09-06 23:58:37,381 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-06 23:59:43,243 [INFO] content.views: Public home page accessed
+2026-09-06 23:59:59,611 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-07 00:00:41,222 [INFO] content.views: Public home page accessed
+2026-09-07 00:03:01,587 [INFO] content.views: Public home page accessed
+2026-09-07 00:03:05,879 [INFO] content.views: Public home page accessed
+2026-09-07 00:03:15,763 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-07 00:04:27,133 [INFO] content.views: Public home page accessed
+2026-09-07 00:04:46,152 [INFO] content.views: Promo codes list accessed
+2026-09-07 00:04:46,153 [INFO] content.services: Fetching and categorizing promo codes
+2026-09-07 00:04:46,164 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-09-07 00:05:41,619 [INFO] content.views: Promo codes list accessed
+2026-09-07 00:05:41,620 [INFO] content.services: Fetching and categorizing promo codes
+2026-09-07 00:05:41,628 [INFO] content.services: Successfully categorized 2 active and 1 archived promo codes
+2026-09-07 00:05:43,380 [INFO] content.views: Public home page accessed
+2026-09-07 00:07:32,528 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-07 00:15:22,779 [INFO] content.views: Public home page accessed
+2026-09-07 00:18:16,050 [INFO] content.views: Public home page accessed
+2026-09-07 00:18:32,565 [INFO] content.views: Public home page accessed
+2026-09-07 00:19:31,342 [INFO] content.views: Public home page accessed
+2026-09-07 00:22:07,082 [INFO] content.views: Public home page accessed
+2026-09-07 00:22:54,180 [INFO] content.views: Public home page accessed
+2026-09-07 00:23:01,396 [INFO] content.views: Public home page accessed
+2026-09-07 00:23:04,053 [WARNING] django.request: Not Found: /favicon.ico
+2026-09-07 00:24:26,095 [INFO] users.models: Client profile yaaanni2 created (Type: individual)
+2026-09-07 00:24:26,096 [INFO] users.views: New client registered: yaaanni2
+2026-09-07 00:24:26,099 [INFO] content.views: Public home page accessed
+2026-09-07 00:24:44,910 [INFO] content.views: Public home page accessed
+2026-09-07 00:24:48,370 [INFO] content.views: Service 'Deep Home Sanitization' added to cart by yaaanni2
+2026-09-07 00:24:48,383 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-07 16:34:59,565 [INFO] content.views: Public home page accessed
+2026-09-07 16:36:12,910 [INFO] content.views: Catalog accessed with filters - min_price: None, max_price: None
+2026-09-07 16:36:16,931 [INFO] content.views: Public home page accessed

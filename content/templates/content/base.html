@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Cleaning Company{% endblock %}</title>
+        <meta name="description" content="{% block meta_description %}Professional home and office cleaning services. High quality and affordable prices.{% endblock %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="{% static 'images/free-icon-cleaning-services-12130086.png' %}" type="image/png">
+        {% block extra_microdata %}{% endblock %}
+    </head>
+    <body>
+        <header class="site-header" itemscope itemtype="http://schema.org/LocalBusiness">
+            
+            <a href="{% url 'content:public_home' %}" itemprop="url" class="logo">
+                <meta itemprop="name" content="Cleaning Company">
+                <img src="{% static 'images/free-icon-cleaning-services-12130086.png' %}" alt="Cleaning Company Logo" itemprop="logo">
+            </a>
+
+            <nav aria-label="Main navigation" class="main-nav">
+                <ul>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:public_home' %}" itemprop="url"><span itemprop="name">Home</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:about_company' %}" itemprop="url"><span itemprop="name">About Us</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:news_list' %}" itemprop="url"><span itemprop="name">News</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:faq_list' %}" itemprop="url"><span itemprop="name">FAQ</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'users:contacts' %}" itemprop="url"><span itemprop="name">Contacts</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:review_list' %}" itemprop="url"><span itemprop="name">Reviews</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:promo_list' %}" itemprop="url"><span itemprop="name">Promos</span></a>
+                    </li>
+                    <li itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <a href="{% url 'content:catalog' %}" itemprop="url"><span itemprop="name">Catalog</span></a>
+                    </li>
+
+                    {% if user.is_authenticated %}
+                        {% if user.is_staff %}
+                            <li class="push-right"><a href="/admin/" class="link-danger">Admin Panel</a></li>
+                            {% if user.is_superuser %}
+                                <li><a href="{% url 'users:superuser_dashboard' %}" class="link-danger">Super Dashboard</a></li>
+                            {% endif %}
+                            <li><a href="{% url 'users:employee_profile' %}">Staff Dashboard</a></li>
+                        {% else %}
+                            <li class="push-right"><a href="{% url 'content:cart' %}" class="link-success">Cart</a></li>
+                            <li><a href="{% url 'users:profile' %}">My Profile</a></li>
+                        {% endif %}
+
+                        <li>
+                            <form action="{% url 'users:logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn-logout">Logout</button>
+                            </form>
+                        </li>
+                    {% else %}
+                        <li class="push-right"><a href="{% url 'users:login' %}">Login</a></li>
+                        <li><a href="{% url 'users:register' %}" class="btn-register">Register</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
+            <p><a href="{% url 'content:privacy_policy' %}">Privacy Policy</a></p>  
+        </footer>
+    </body>
+</html>

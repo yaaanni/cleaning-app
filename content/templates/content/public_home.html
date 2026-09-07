@@ -1,162 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cleaning Company - Home</title>
-    <style>
-        :root {
-            --primary: #4361ee;
-            --bg-color: #f8fafc;
-            --text-main: #333;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        nav {
-            background-color: white;
-            padding: 15px 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-left a { margin-right: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
-        .nav-right { display: flex; align-items: center; gap: 20px; }
-        .nav-right a { text-decoration: none; color: var(--primary); font-weight: bold; }
+{% extends 'content/base.html' %}
+{% load static %}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            flex-grow: 1;
-        }
-
-        .news-card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary);
-        }
-        .news-date {
-            color: #888;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-        .news-title {
-            margin-top: 0;
-            color: var(--primary);
-        }
-        .read-more-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background-color: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .read-more-btn:hover {
-            background-color: #3a56d4;
-        }
-
-        /* Footer (Подвал сайта) */
-        footer {
-            background-color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #666;
-        }
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-<nav>
-    <div class="nav-left">
-        <a href="/">Home</a>
-        <a href="/about/">About Us</a>
-        <a href="/news/">News</a>
-        <a href="/faq/">FAQ</a>
-        <a href="{% url 'users:contacts' %}">Contacts</a>
-        <a href="/reviews/">Reviews</a>
-        <a href="{% url 'content:promo_list' %}">Promos</a>
-        <a href="{% url 'content:catalog' %}">Catalog</a>
-    </div>
-
-    <div class="nav-right">
-        {% if user.is_authenticated %}
-            {% if user.is_staff %}
-                <a href="/admin/" style="color: #ef4444; margin-right: 15px;">Admin Panel</a>
-
-                {% if user.is_superuser %}
-                    <a href="{% url 'users:superuser_dashboard' %}" style="color: #ef4444; margin-right: 15px;">Super Dashboard</a>
-                {% endif %}
-
-                <a href="{% url 'users:employee_profile' %}" style="color: var(--primary);">Staff Dashboard</a>
-            {% else %}
-                <a href="{% url 'content:cart' %}" style="color: #10b981; margin-right: 15px;">Cart</a>
-                <a href="{% url 'users:profile' %}" style="color: var(--primary);">My Profile</a>
-            {% endif %}
-
-            <form action="{% url 'users:logout' %}" method="post" style="margin: 0; display: inline-block;">
-                {% csrf_token %}
-                <button type="submit" style="background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 12px; border-radius: 5px; font-weight: bold; cursor: pointer; font-family: inherit; font-size: 1em; transition: background 0.2s; margin-left: 15px;">
-                    Logout
-                </button>
-            </form>
-        {% else %}
-            <a href="{% url 'users:login' %}">Login</a>
-            <a href="{% url 'users:register' %}" style="background: var(--primary); color: white; padding: 8px 15px; border-radius: 5px;">Register</a>
-        {% endif %}
-    </div>
-</nav>
+{% block content %}
 
 <div class="container">
-    <h1>Welcome to our Cleaning Company!</h1>
-    <p>We take care of the cleanliness of your home and office.</p>
+    
+    <div class="hero-section">
+        {% if company and company.logo %}
+            <img src="{% static 'images/free-icon-cleaning-services-12130086.png' %}" alt="{{ company.name }}" class="hero-logo">
+        {% endif %}
+        <h1 class="hero-title">Welcome to our Cleaning Company!</h1>
+        <p class="hero-subtitle">We take care of the cleanliness of your home and office.</p>
+    </div>
 
-    <hr style="margin: 30px 0; border: 0; border-top: 1px solid #ddd;">
+    <div class="banner-container">
+        <img src="{% static 'images/banner.jpeg' %}" alt="Promo Banner" class="banner-img">
+    </div>
 
-    <h2>Latest News:</h2>
+    <h2 class="section-title">Our Services</h2>
+    {% for category in categories %}
+        {% with services=category.services.all %}
+        {% if services|length > 0 %}
+            <h3 style="color: #475569; margin-top: 20px;">{{ category.name }}</h3>
+            <div class="catalog-grid">
+                {% for service in services|slice:":3" %}
+                <div class="service-card">
+                    <h4 class="service-name">{{ service.name }}</h4>
+                    <div class="service-price">{{ service.price }} BYN</div>
+                    <div class="service-desc">{{ service.note }}</div>
+                    
+                    {% if is_client %}
+                        <form action="{% url 'content:add_to_cart' %}" method="post" style="margin: 0;">
+                            {% csrf_token %}
+                            <input type="hidden" name="service_id" value="{{ service.id }}">
+                            <button type="submit" class="btn-add">
+                                <span class="plus-icon">➕</span> Add to Cart
+                            </button>
+                        </form>
+                    {% elif not user.is_authenticated %}
+                        <div style="text-align: center; margin-top: 10px;">
+                            <a href="{% url 'users:login' %}" style="color: var(--primary); text-decoration: none; font-size: 0.9em;">Login to order</a>
+                        </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+    {% empty %}
+        <p style="color: #888;">Catalog is empty right now.</p>
+    {% endfor %}
 
+    <div style="text-align: center; margin-bottom: 40px;">
+        <a href="{% url 'content:catalog' %}" style="display: inline-block; background: #f1f5f9; color: var(--primary); font-weight: bold; padding: 10px 20px; border-radius: 6px; text-decoration: none; transition: background 0.2s;">
+            View Full Catalog &rarr;
+        </a>
+    </div>
+
+    <h2 class="section-title">Latest News</h2>
     {% if latest_news %}
-    <div class="news-card">
-        <div class="news-date">{{ latest_news.pub_date|date:"d M Y" }}</div>
-        <h3 class="news-title">{{ latest_news.title }}</h3>
-        <p>{{ latest_news.short_content }}</p>
-
-        <a href="{% url 'content:news_detail' pk=latest_news.pk %}" class="read-more-btn">Read more &rarr;</a>
+    <div class="service-card" style="border-left: 4px solid var(--primary);">
+        <div style="color: #888; font-size: 0.9em; margin-bottom: 5px;">{{ latest_news.pub_date|date:"d M Y" }}</div>
+        <h3 style="margin: 0 0 10px 0; color: var(--primary);">{{ latest_news.title }}</h3>
+        <p style="color: #475569; margin-top: 0;">{{ latest_news.short_content }}</p>
+        <div>
+            <a href="{% url 'content:news_detail' pk=latest_news.pk %}" style="display: inline-block; background: var(--primary); color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none; font-size: 0.9em;">Read more &rarr;</a>
+        </div>
     </div>
     {% else %}
     <p style="color: #888;">No news yet. Check back later!</p>
     {% endif %}
 
+    <h2 class="section-title">Our Partners</h2>
+    <div class="partners-container">
+        {% for partner in partners %}
+            <a href="{{ partner.website }}" target="_blank" title="{{ partner.name }}">
+                <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" class="partner-logo">
+            </a>
+        {% empty %}
+            <p style="color: #888;">Our partners list will be updated soon.</p>
+        {% endfor %}
+    </div>
+
 </div>
-
-<footer>
-    <p>&copy; {% now "Y" %} Cleaning Company. All rights reserved.</p>
-    <p><a href="{% url 'content:privacy_policy' %}">Privacy Policy</a></p>
-</footer>
-
-</body>
-</html>
+{% endblock %}

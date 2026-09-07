@@ -8,7 +8,7 @@ from django.shortcuts import redirect, get_object_or_404, render
 from django.contrib import messages
 from django.db.models import Sum, Prefetch, Count, Q
 
-from .models import News, CompanyInfo, CompanyHistory, FAQ, Review
+from .models import News, CompanyInfo, CompanyHistory, FAQ, Review, Partner
 from content.models import Vacancy, PromoCode
 from cleaning.models import ServiceType, Service, Order, OrderItem
 from users.models import Employee
@@ -23,7 +23,15 @@ class PublicHomeView(TemplateView):
     def get_context_data(self, **kwargs):
         logger.info("Public home page accessed")
         context = super().get_context_data(**kwargs)
+        
+        context['company'] = CompanyInfo.objects.first()
+        context['categories'] = ServiceType.objects.prefetch_related('services').all()
         context['latest_news'] = News.objects.order_by('-pub_date').first()
+        context['partners'] = Partner.objects.all()
+        
+        user = self.request.user
+        context['is_client'] = user.is_authenticated and hasattr(user, 'client_profile')
+        
         return context
 
 class AboutCompanyView(TemplateView):

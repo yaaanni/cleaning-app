@@ -1,5 +1,5 @@
 from django.contrib import admin
-from content.models import CompanyInfo, CompanyHistory, News, Review, PromoCode, FAQ, Vacancy
+from content.models import CompanyInfo, CompanyHistory, News, Review, PromoCode, FAQ, Vacancy, Partner
 
 
 @admin.register(CompanyInfo)
@@ -47,3 +47,7 @@ class PromoCodeAdmin(admin.ModelAdmin):
     list_display = ('code', 'discount_percent', 'is_archived')
     list_filter = ('is_archived',)
     search_fields = ('code',)
+
+@admin.register(Partner)
+class PartnerAdmin(admin.ModelAdmin):
+    list_display = ('name', 'website')
